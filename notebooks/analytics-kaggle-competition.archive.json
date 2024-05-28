@@ -1,0 +1,78 @@
+{
+    "data": {
+        "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+        "name": "2018 NOMAD-Kaggle research competition",
+        "description": "In this tutorial, we will explore the best results of the NOMAD 2018 Kaggle research competition. The goal of this competition was to develop machine-learning models for the prediction of two target properties: the formation energy and the bandgap energy of transparent semiconducting oxides. The purpose of the modelling is to facilitate the discovery of new such materials and allow for advancements in (opto)electronic technologies",
+        "date": "2021-01-19",
+        "category": "advanced tutorial",
+        "tags": [
+            "Supervised learning",
+            "Regression",
+            "Kernel ridge regression",
+            "Neural networks",
+            "SOAP",
+            "n-gram"
+        ],
+        "systems": [
+            "Transparent conducting oxides"
+        ],
+        "platform": "Python",
+        "authors": [
+            {
+                "last_name": "Liu",
+                "first_name": "Xiangyue"
+            },
+            {
+                "last_name": "Sutton",
+                "first_name": "Christopher"
+            },
+            {
+                "last_name": "Yamamoto",
+                "first_name": "Takenori"
+            },
+            {
+                "last_name": "Blumenthal",
+                "first_name": "Lars"
+            },
+            {
+                "last_name": "Golebiowski",
+                "first_name": "Jacek"
+            },
+            {
+                "last_name": "Ziletti",
+                "first_name": "Angelo"
+            },
+            {
+                "last_name": "Scheffler",
+                "first_name": "Matthias"
+            },
+            {
+                "last_name": "Ghiringhelli",
+                "first_name": "Luca M."
+            }
+        ],
+        "references": [
+            {
+                "kind": "article_doi",
+                "uri": "https://doi.org/10.1038/s41524-019-0239-3"
+            },
+            {
+                "kind": "hub",
+                "uri": "https://analytics-toolkit.nomad-coe.eu/hub/user-redirect/notebooks/tutorials/kaggle_competition.ipynb"
+            },
+            {
+                "kind": "article_url",
+                "uri": "https://th.fhi.mpg.de/site/uploads/Publications/s41524-019-0239-3.pdf"
+            },
+            {
+                "kind": "repository",
+                "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-kaggle-competition"
+            }
+        ],
+        "related_publications": [
+            {
+                "DOI_number": "10.1038/s41524-019-0239-3"
+            }
+        ]
+    }
+}

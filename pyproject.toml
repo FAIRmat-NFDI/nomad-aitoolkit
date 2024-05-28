@@ -25,10 +25,10 @@ maintainers = [
     { name = "Adam Fekete", email = "adam.fekete@hu-berlin.de" },
 ]
 license = { file = "LICENSE" }
-dependencies = ["nomad-lab>=1.2.2dev578"]
+# dependencies = ["nomad-lab>=1.2.2dev578"]
 
 [project.urls]
-Repository = "https://github.com/fekad/nomad-aitoolkit"
+Repository = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "structlog"]
@@ -74,7 +74,7 @@ select = [
     "UP",
     # isort
     "I",
-    # pylint 
+    # pylint
     "PL",
 ]
 
@@ -109,6 +109,6 @@ where = ["src"]
 
 [project.entry-points.'nomad.plugin']
 
-mypackage = "nomad_aitoolkit.schema_packages:mypackage"
-mynormalizer = "nomad_aitoolkit.normalizers:mynormalizer"
-myapp = "nomad_aitoolkit.apps:myapp"
+aitookitschema = "nomad_aitoolkit.schema:package"
+aitookitapp = "nomad_aitoolkit.apps:aitoolkit"
+notebookapp = "nomad_aitoolkit.apps:notebook"

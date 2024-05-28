@@ -1,0 +1,53 @@
+{
+    "data": {
+        "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+        "name": "Introduction to decision-trees methods",
+        "description": "In this tutorial we will introduce decision trees. We go through a toy model introducing the SKLearn API. We then discuss step by step the different theoretical aspects of trees. We then move to training a regression tree and classification tree on different datasets related to materials science. We end the tutorial by covering random forests and bagging classfiers.",
+        "date": "2020-12-08",
+        "category": "beginner tutorial",
+        "tags": [
+            "Supervised learning",
+            "Regression",
+            "Classification",
+            "Decision tree",
+            "Random forest",
+            "Bagging classifier",
+            "Atomic features"
+        ],
+        "systems": [
+            "Images",
+            "Metals",
+            "Insulators",
+            "matbench_expt_is_metal"
+        ],
+        "platform": "Python",
+        "authors": [
+            {
+                "last_name": "Speckhard",
+                "first_name": "Daniel"
+            },
+            {
+                "last_name": "Leitherer",
+                "first_name": "Andreas"
+            },
+            {
+                "last_name": "Ghiringhelli",
+                "first_name": "Luca M."
+            }
+        ],
+        "references": [
+            {
+                "kind": "hub",
+                "uri": "https://analytics-toolkit.nomad-coe.eu/hub/user-redirect/notebooks/tutorials/decision_tree.ipynb"
+            },
+            {
+                "kind": "repository",
+                "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-decision-tree"
+            },
+            {
+                "kind": "video",
+                "uri": "https://www.youtube.com/watch?v=YBy9STVaqvU"
+            }
+        ]
+    }
+}
