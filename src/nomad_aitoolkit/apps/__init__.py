@@ -1,4 +1,4 @@
-from nomad.config import config
+# ruff: noqa: E501
 from nomad.config.models.plugins import AppEntryPoint
 from nomad.config.models.ui import (
     AlignEnum,
@@ -14,7 +14,6 @@ from nomad.config.models.ui import (
     Layout,
     ScaleEnum,
     WidgetTerms,
-    SearchSyntaxes,
 )
 
 # TODO: At the moment we only support targeting scalar quantities from custom schemas.
@@ -30,6 +29,7 @@ class AIToolkitAppEntryPoint(AppEntryPoint):
     pass
 
 
+# from nomad.config import config
 # configuration = config.get_plugin_entry_point('nomad_aitoolkit.apps:aitoolkit')
 
 # tools:
@@ -108,7 +108,9 @@ aitoolkit = AIToolkitAppEntryPoint(
         filter_menus=FilterMenus(
             options={
                 # 'material': FilterMenu(label='Material'),
-                # 'elements': FilterMenu(label='Elements / Formula', level=1, size=FilterMenuSizeEnum.XL),
+                # 'elements': FilterMenu(
+                #     label='Elements / Formula', level=1, size=FilterMenuSizeEnum.XL
+                # ),
                 # 'structure': FilterMenu(label='Structure', level=1),
                 'custom_quantities': FilterMenu(
                     label='Notebooks', size=FilterMenuSizeEnum.L

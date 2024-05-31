@@ -36,8 +36,10 @@ configuration = config.get_plugin_entry_point('nomad_aitoolkit.schema:package')
 # - [ ] notebook parser
 # - [x] remove html tags from comments
 
+
 def remove_tags(text):
     return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+
 
 m_package = SchemaPackage(name='AI Toolkit Notebook Schema')
 
@@ -76,6 +78,7 @@ class System(ArchiveSection):
         ),
         description='For testing subsection quantity.',
     )
+
 
 class Author(ArchiveSection):
     m_def = Section(a_eln=ELNAnnotation(overview=True))
@@ -146,7 +149,6 @@ class Reference(ArchiveSection):
         ),
         description='For testing subsection quantity.',
     )
-
 
     def normalize(self, archive: 'EntryArchive', logger: 'BoundLogger') -> None:
         super().normalize(archive, logger)
@@ -262,6 +264,8 @@ class BaseNotebook(Schema):
             archive.metadata.comment = remove_tags(self.description)
 
         # TODO: fix this workaround
+
+
 #         if self.methods:
 #             if not archive.results:
 #                 archive.results = Results(eln=ELN())
@@ -269,8 +273,6 @@ class BaseNotebook(Schema):
 #                 archive.results.eln = ELN()
 #
 #             archive.results.eln.tags = self.methods
-
-
 
 
 class Notebook(BaseNotebook):
@@ -303,8 +305,8 @@ class Notebook(BaseNotebook):
     config_files = Quantity(
         type=str,
         shape=['*'],
-        description="""A reference to a configuration file(s) which used to determine the environment.
-        (https://repo2docker.readthedocs.io/en/latest/config_files.html)
+        description="""A reference to a configuration file(s) which used to determine
+        the environment. (https://repo2docker.readthedocs.io/en/latest/config_files.html)
         """,
         a_eln=ELNAnnotation(
             component=ELNComponentEnum.FileEditQuantity, label='Configuration file(s)'
@@ -349,8 +351,6 @@ class AIToolkitNotebook(BaseNotebook):
             )
         ),
     )
-
-
 
     # authors = Quantity(
     #     type=Author,
@@ -446,21 +446,19 @@ class AIToolkitNotebook(BaseNotebook):
 
     references = SubSection(section=Reference, repeats=True)
 
-
     def normalize(self, archive: 'EntryArchive', logger: 'BoundLogger') -> None:
         super().normalize(archive, logger)
 
         logger.info('AIToolkitNotebook.normalize', parameter=configuration.parameter)
 
         # if self.authors:
-        #     self.authors_list = ', '.join([f"{v['first_name']} {v['last_name']}" for v in self.authors])
+        #     self.authors_list = ', '.join([f"{v['first_name']} {v['last_name']}" for v in self.authors])  # noqa:E501
 
         # This is a workaroudn to use Author field on the gui
         if self.authors:
             archive.metadata.entry_coauthors = [
                 NomadAuthor(**author.m_to_dict()) for author in self.authors
             ]
-
 
         if self.references:
             for reference in self.references:

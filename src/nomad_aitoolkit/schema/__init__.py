@@ -13,5 +13,6 @@ class AIToolkitSchemaPackageEntryPoint(SchemaPackageEntryPoint):
 
 package = AIToolkitSchemaPackageEntryPoint(
     name='AIToolkit',
-    description='Describes the basic schemas for user-defined and ai toolkit notebooks using the new plugin mechanism.',
+    description='Describes the basic schemas for user-defined and ' \
+        'ai toolkit notebooks using the new plugin mechanism.',
 )
