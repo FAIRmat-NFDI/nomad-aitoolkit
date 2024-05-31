@@ -5,20 +5,42 @@
         "description": "This interactive notebook introduces the concepts and original implementation of total cumulative mutual information (TCMI), as presented in the related publication. The main results of the publication are also reproduced in a hands-on style",
         "date": "2020-02-06",
         "category": "advanced tutorial",
-        "tags": [
-            "Supervised learning",
-            "Unsupervised learning",
-            "Features selection",
-            "Information theory",
-            "Mutual information",
-            "Cumulative entropy",
-            "Clustering",
-            "TCMI"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Unsupervised learning"
+            },
+            {
+                "name": "Features selection"
+            },
+            {
+                "name": "Information theory"
+            },
+            {
+                "name": "Mutual information"
+            },
+            {
+                "name": "Cumulative entropy"
+            },
+            {
+                "name": "Clustering"
+            },
+            {
+                "name": "TCMI"
+            }
         ],
         "systems": [
-            "Synthetic data",
-            "UCI regression dataset",
-            "Octet binaries"
+            {
+                "name": "Synthetic data"
+            },
+            {
+                "name": "UCI regression dataset"
+            },
+            {
+                "name": "Octet binaries"
+            }
         ],
         "platform": "Python",
         "authors": [

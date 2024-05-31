@@ -5,11 +5,15 @@
         "description": "This tutorial explores the application of SISSO to a consistent experimental data set in order to identify the key parameters correlated with the catalyst selectivity in propane oxidation.",
         "date": "2022-6-23",
         "category": "advanced tutorial",
-        "tags": [
-            "SISSO"
+        "methods": [
+            {
+                "name": "SISSO"
+            }
         ],
         "systems": [
-            "Heterogeneous catalysis"
+            {
+                "name": "Heterogeneous catalysis"
+            }
         ],
         "platform": "Python",
         "authors": [

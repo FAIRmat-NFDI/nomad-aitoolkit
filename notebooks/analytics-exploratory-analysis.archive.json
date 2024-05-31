@@ -5,20 +5,42 @@
         "description": "Exploratory analyses make use of unsupervised learning techniques to extract information from unknown datasets. In this tutorial, we make use of some of the most popular clustering and dimension reduction algorithms to analyze a dataset composed of 82 octet-binary compounds.",
         "date": "2021-02-04",
         "category": "beginner tutorial",
-        "tags": [
-            "Clustering",
-            "Dimensionality reduction",
-            "k-means",
-            "Hierarchical clustering",
-            "DBSCAN",
-            "HDBSCAN",
-            "DenPeak",
-            "PCA",
-            "t-SNE",
-            "MDS"
+        "methods": [
+            {
+                "name": "Clustering"
+            },
+            {
+                "name": "Dimensionality reduction"
+            },
+            {
+                "name": "k-means"
+            },
+            {
+                "name": "Hierarchical clustering"
+            },
+            {
+                "name": "DBSCAN"
+            },
+            {
+                "name": "HDBSCAN"
+            },
+            {
+                "name": "DenPeak"
+            },
+            {
+                "name": "PCA"
+            },
+            {
+                "name": "t-SNE"
+            },
+            {
+                "name": "MDS"
+            }
         ],
         "systems": [
-            "Octet binaries"
+            {
+                "name": "Octet binaries"
+            }
         ],
         "platform": "Python",
         "authors": [

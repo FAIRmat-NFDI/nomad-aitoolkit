@@ -5,17 +5,33 @@
         "description": "In this tutorial, we will be using a machine-learning method (clustering) to analyse results of grain-boundary (GB) calculations of alpha-iron. Along the way, we will learn about different methods to describe local atomic environment in order to calculate properties of GBs. We will use these properties to separate the different regions of the GB using clustering methods. Finally we will determine how the energy of the GB is changing according to the angle difference of the regions.",
         "date": "2020-01-18",
         "category": "advanced tutorial",
-        "tags": [
-            "Unsupervised learning",
-            "Supervised learning",
-            "Clustering",
-            "Regression",
-            "k-means",
-            "Gaussian mixture"
+        "methods": [
+            {
+                "name": "Unsupervised learning"
+            },
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Clustering"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "k-means"
+            },
+            {
+                "name": "Gaussian mixture"
+            }
         ],
         "systems": [
-            "Iron",
-            "Grain boundaries"
+            {
+                "name": "Iron"
+            },
+            {
+                "name": "Grain boundaries"
+            }
         ],
         "platform": "Python",
         "authors": [

@@ -5,15 +5,27 @@
         "description": "This tutorial introduces, by means of two applications in materials science, the artificial-intelligence technique subgroup discovery.",
         "date": "2021-10-28",
         "category": "intermediate tutorial",
-        "tags": [
-            "Subgroup discovery",
-            "Decision tree"
+        "methods": [
+            {
+                "name": "Subgroup discovery"
+            },
+            {
+                "name": "Decision tree"
+            }
         ],
         "systems": [
-            "Heterogeneous catalysis",
-            "Oxygen evolution reaction",
-            "Oxygen reduction reaction",
-            "Scaling relations"
+            {
+                "name": "Heterogeneous catalysis"
+            },
+            {
+                "name": "Oxygen evolution reaction"
+            },
+            {
+                "name": "Oxygen reduction reaction"
+            },
+            {
+                "name": "Scaling relations"
+            }
         ],
         "platform": "Python",
         "authors": [

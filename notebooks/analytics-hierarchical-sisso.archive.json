@@ -5,11 +5,15 @@
         "description": "In this notebook, we describe a hierarchical symbolic-regression approach for finding, based on data, analytical expressions relating materials properties to simpler physicochemical parameters associated with the underlying processes governing the properties.",
         "date": "2022-8-3",
         "category": "advanced tutorial",
-        "tags": [
-            "SISSO"
+        "methods": [
+            {
+                "name": "SISSO"
+            }
         ],
         "systems": [
-            "Bulk properties"
+            {
+                "name": "Bulk properties"
+            }
         ],
         "platform": "Python",
         "authors": [

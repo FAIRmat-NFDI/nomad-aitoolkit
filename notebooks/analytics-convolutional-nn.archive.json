@@ -5,15 +5,27 @@
         "description": "In this tutorial, we briefly introduce the main ideas behind convolutional neural networks, build a neural network model with Keras, and explain the classification decision process using attentive response maps.",
         "date": "2021-01-29",
         "category": "intermediate tutorial",
-        "tags": [
-            "Supervised learning",
-            "Classification",
-            "Neural networks",
-            "Convolutional neural networks",
-            "Attentive response map"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Classification"
+            },
+            {
+                "name": "Neural networks"
+            },
+            {
+                "name": "Convolutional neural networks"
+            },
+            {
+                "name": "Attentive response map"
+            }
         ],
         "systems": [
-            "Images"
+            {
+                "name": "Images"
+            }
         ],
         "platform": "Python",
         "authors": [

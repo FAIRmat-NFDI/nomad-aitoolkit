@@ -5,16 +5,30 @@
         "description": "In this tutorial, we will explore the best results of the NOMAD 2018 Kaggle research competition. The goal of this competition was to develop machine-learning models for the prediction of two target properties: the formation energy and the bandgap energy of transparent semiconducting oxides. The purpose of the modelling is to facilitate the discovery of new such materials and allow for advancements in (opto)electronic technologies",
         "date": "2021-01-19",
         "category": "advanced tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Kernel ridge regression",
-            "Neural networks",
-            "SOAP",
-            "n-gram"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Kernel ridge regression"
+            },
+            {
+                "name": "Neural networks"
+            },
+            {
+                "name": "SOAP"
+            },
+            {
+                "name": "n-gram"
+            }
         ],
         "systems": [
-            "Transparent conducting oxides"
+            {
+                "name": "Transparent conducting oxides"
+            }
         ],
         "platform": "Python",
         "authors": [

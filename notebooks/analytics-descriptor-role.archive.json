@@ -5,17 +5,33 @@
         "description": "A tool for predicting the difference in the total energy between different polymorphs for 82 octet binary compounds, which gives an indication of the stability of the material. This is accomplished by identifying a set of descriptive parameters (a descriptor) from the free-atom data for the binary atomic species comprising the material using the Sure Independent Screening (SIS) + l0-norm minimization approach.",
         "date": "2021-10-18",
         "category": "advanced tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Features selection",
-            "SISSO",
-            "Atomic features"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Features selection"
+            },
+            {
+                "name": "SISSO"
+            },
+            {
+                "name": "Atomic features"
+            }
         ],
         "systems": [
-            "Octet binaries",
-            "Rock salt",
-            "Zinc blende"
+            {
+                "name": "Octet binaries"
+            },
+            {
+                "name": "Rock salt"
+            },
+            {
+                "name": "Zinc blende"
+            }
         ],
         "platform": "Python",
         "authors": [

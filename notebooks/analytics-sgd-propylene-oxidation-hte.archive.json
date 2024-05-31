@@ -5,11 +5,15 @@
         "description": "This tutorial explores the application of subgroup discovery (SGD) to an experimental-theoretical data set in order to identify rules on key physicochemical parameters that describe the materials and environmental conditions associated with outstanding performance in heterogeneous catalysis.",
         "date": "2022-2-09",
         "category": "advanced tutorial",
-        "tags": [
-            "Subgroup discovery"
+        "methods": [
+            {
+                "name": "Subgroup discovery"
+            }
         ],
         "systems": [
-            "Heterogeneous catalysis"
+            {
+                "name": "Heterogeneous catalysis"
+            }
         ],
         "platform": "Python",
         "authors": [

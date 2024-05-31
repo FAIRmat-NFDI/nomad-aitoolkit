@@ -5,16 +5,30 @@
         "description": "In this tutorial, we will use Gaussian process regression, GPR (or equivalently, Kernel Ridge Regression, KRR) to train and predict charges on atoms in small organic molecules.",
         "date": "2019-09-26",
         "category": "intermediate tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Gaussian process regression",
-            "Kernel ridge regression",
-            "SOAP"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Gaussian process regression"
+            },
+            {
+                "name": "Kernel ridge regression"
+            },
+            {
+                "name": "SOAP"
+            }
         ],
         "systems": [
-            "GDB molecular database",
-            "GDB7"
+            {
+                "name": "GDB molecular database"
+            },
+            {
+                "name": "GDB7"
+            }
         ],
         "platform": "Python",
         "authors": [

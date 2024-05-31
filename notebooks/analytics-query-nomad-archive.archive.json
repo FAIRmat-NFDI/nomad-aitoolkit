@@ -5,16 +5,30 @@
         "description": "In this tutorial, we demonstrate how to query the NOMAD Archive from the NOMAD Analytics toolkit. We then show examples of machine learning analysis performed on the retrieved data set.",
         "date": "2021-04-14",
         "category": "query tutorial",
-        "tags": [
-            "Unsupervised learning",
-            "Supervised learning",
-            "Regression",
-            "Clustering",
-            "Dimensionality reduction",
-            "Random forest"
+        "methods": [
+            {
+                "name": "Unsupervised learning"
+            },
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Clustering"
+            },
+            {
+                "name": "Dimensionality reduction"
+            },
+            {
+                "name": "Random forest"
+            }
         ],
         "systems": [
-            "Ternaries"
+            {
+                "name": "Ternaries"
+            }
         ],
         "platform": "Python",
         "authors": [

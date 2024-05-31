@@ -5,13 +5,21 @@
         "description": "This tutorial shows how to find descriptive parameters (short formulas) for the classification of materials properties. As an example, we address the classification of elemental and binary systems Ax\u200b\u200bBy\u200b\u200b into metals and non metals using experimental data extracted from the SpringerMaterials data base. The method is based on the algorithm sure independence screening and sparsifying operator (SISSO), which enables to search for optimal descriptors by scanning huge feature spaces. ",
         "date": "2021-12-1",
         "category": "advanced tutorial",
-        "tags": [
-            "SISSO",
-            "Classification"
+        "methods": [
+            {
+                "name": "SISSO"
+            },
+            {
+                "name": "Classification"
+            }
         ],
         "systems": [
-            "Binaries",
-            "Elements"
+            {
+                "name": "Binaries"
+            },
+            {
+                "name": "Elements"
+            }
         ],
         "platform": "Python",
         "authors": [

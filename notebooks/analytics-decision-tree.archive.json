@@ -5,20 +5,42 @@
         "description": "In this tutorial we will introduce decision trees. We go through a toy model introducing the SKLearn API. We then discuss step by step the different theoretical aspects of trees. We then move to training a regression tree and classification tree on different datasets related to materials science. We end the tutorial by covering random forests and bagging classfiers.",
         "date": "2020-12-08",
         "category": "beginner tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Classification",
-            "Decision tree",
-            "Random forest",
-            "Bagging classifier",
-            "Atomic features"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Classification"
+            },
+            {
+                "name": "Decision tree"
+            },
+            {
+                "name": "Random forest"
+            },
+            {
+                "name": "Bagging classifier"
+            },
+            {
+                "name": "Atomic features"
+            }
         ],
         "systems": [
-            "Images",
-            "Metals",
-            "Insulators",
-            "matbench_expt_is_metal"
+            {
+                "name": "Images"
+            },
+            {
+                "name": "Metals"
+            },
+            {
+                "name": "Insulators"
+            },
+            {
+                "name": "matbench_expt_is_metal"
+            }
         ],
         "platform": "Python",
         "authors": [

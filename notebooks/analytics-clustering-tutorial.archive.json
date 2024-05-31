@@ -5,16 +5,30 @@
         "description": "In this tutorial, we introduce to the most popular clustering algorithms. We focus on partitioning, hierarchical and density-based clustering algorithms. The methods are tested on synthetic datasets of increasing complexity",
         "date": "2021-01-21",
         "category": "beginner tutorial",
-        "tags": [
-            "Unsupervised learning",
-            "Clustering",
-            "k-means",
-            "Hierarchical clustering",
-            "DBSCAN",
-            "HDBSCAN"
+        "methods": [
+            {
+                "name": "Unsupervised learning"
+            },
+            {
+                "name": "Clustering"
+            },
+            {
+                "name": "k-means"
+            },
+            {
+                "name": "Hierarchical clustering"
+            },
+            {
+                "name": "DBSCAN"
+            },
+            {
+                "name": "HDBSCAN"
+            }
         ],
         "systems": [
-            "Synthetic data"
+            {
+                "name": "Synthetic data"
+            }
         ],
         "platform": "Python",
         "authors": [

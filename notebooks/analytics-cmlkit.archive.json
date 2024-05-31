@@ -5,16 +5,30 @@
         "description": "In this tutorial, we will get to know cmlkit, a python package for specifying, evaluating, and optimising machine learning models, and use it to compete in the Nomad 2018 Kaggle challenge.",
         "date": "2021-01-14",
         "category": "advanced tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Kernel ridge regression",
-            "SOAP",
-            "MBTR",
-            "Symmetry functions"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Kernel ridge regression"
+            },
+            {
+                "name": "SOAP"
+            },
+            {
+                "name": "MBTR"
+            },
+            {
+                "name": "Symmetry functions"
+            }
         ],
         "systems": [
-            "Transparent conducting oxides"
+            {
+                "name": "Transparent conducting oxides"
+            }
         ],
         "platform": "Python",
         "authors": [

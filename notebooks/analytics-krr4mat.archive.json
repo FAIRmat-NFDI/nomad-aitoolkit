@@ -5,14 +5,24 @@
         "description": "In this tutorial, we will explore the application of kernel ridge regression to the prediction of materials properties. We will begin with a largely informal, pragmatic introduction to kernel ridge regression, including a rudimentary implementation, in order to become familiar with the basic terminology and considerations. We will then discuss representations, and re-trace the NOMAD 2018 Kaggle challenge.",
         "date": "2020-12-15",
         "category": "beginner tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Kernel ridge regression",
-            "SOAP"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Kernel ridge regression"
+            },
+            {
+                "name": "SOAP"
+            }
         ],
         "systems": [
-            "Transparent conducting oxides"
+            {
+                "name": "Transparent conducting oxides"
+            }
         ],
         "platform": "Python",
         "authors": [

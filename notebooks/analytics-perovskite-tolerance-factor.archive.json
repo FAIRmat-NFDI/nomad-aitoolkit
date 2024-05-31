@@ -5,18 +5,36 @@
         "description": "This tutorial shows how a tolerance factor for predicting perovskite stability can be learned from data with the sure-independece-screening-and-sparsifying-operator (SISSO) descriptor-identification approach.",
         "date": "2022-05-18",
         "category": "advanced tutorial",
-        "tags": [
-            "Supervised learning",
-            "Classification",
-            "Symbolic regression",
-            "Compressed sensing",
-            "SISSO",
-            "Decision tree",
-            "Features selection",
-            "Atomic features"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Classification"
+            },
+            {
+                "name": "Symbolic regression"
+            },
+            {
+                "name": "Compressed sensing"
+            },
+            {
+                "name": "SISSO"
+            },
+            {
+                "name": "Decision tree"
+            },
+            {
+                "name": "Features selection"
+            },
+            {
+                "name": "Atomic features"
+            }
         ],
         "systems": [
-            "Perovskite"
+            {
+                "name": "Perovskite"
+            }
         ],
         "platform": "Python",
         "authors": [

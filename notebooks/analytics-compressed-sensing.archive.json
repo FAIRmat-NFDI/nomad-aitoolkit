@@ -5,19 +5,39 @@
         "description": "In this tutorial we will show how to find descriptive parameters to predict materials properties using symbolic regrression combined with compressed sensing tools. The relative stability of the zincblende (ZB) versus rocksalt (RS) structure of binary materials is predicted and compared against a model trained with kernel ridge regression.",
         "date": "2020-09-20",
         "category": "beginner tutorial",
-        "tags": [
-            "Supervised learning",
-            "Regression",
-            "Compressed sensing",
-            "Symbolic regression",
-            "LASSO",
-            "SISSO",
-            "Kernel ridge regression",
-            "Features selection",
-            "Atomic features"
+        "methods": [
+            {
+                "name": "Supervised learning"
+            },
+            {
+                "name": "Regression"
+            },
+            {
+                "name": "Compressed sensing"
+            },
+            {
+                "name": "Symbolic regression"
+            },
+            {
+                "name": "LASSO"
+            },
+            {
+                "name": "SISSO"
+            },
+            {
+                "name": "Kernel ridge regression"
+            },
+            {
+                "name": "Features selection"
+            },
+            {
+                "name": "Atomic features"
+            }
         ],
         "systems": [
-            "Octet binaries"
+            {
+                "name": "Octet binaries"
+            }
         ],
         "platform": "Python",
         "authors": [

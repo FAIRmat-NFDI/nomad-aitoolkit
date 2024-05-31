@@ -5,11 +5,15 @@
         "description": "In this tutorial...",
         "date": "2022-03-31",
         "category": "beginner tutorial",
-        "tags": [
-            "SVM"
+        "methods": [
+            {
+                "name": "SVM"
+            }
         ],
         "systems": [
-            "Perovskite"
+            {
+                "name": "Perovskite"
+            }
         ],
         "platform": "Python",
         "authors": [

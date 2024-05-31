@@ -5,14 +5,24 @@
         "description": "In this interactive tutorial we show the application of subgroup discovery for the search for indicators of carbond-dioxide activation with the aim of its further conversion.",
         "date": "2021-08-26",
         "category": "advanced tutorial",
-        "tags": [
-            "Subgroup discovery",
-            "Decision tree"
+        "methods": [
+            {
+                "name": "Subgroup discovery"
+            },
+            {
+                "name": "Decision tree"
+            }
         ],
         "systems": [
-            "CO2 activation",
-            "Heterogeneous catalysis",
-            "Semicondictor oxides"
+            {
+                "name": "CO2 activation"
+            },
+            {
+                "name": "Heterogeneous catalysis"
+            },
+            {
+                "name": "Semicondictor oxides"
+            }
         ],
         "platform": "Python",
         "authors": [

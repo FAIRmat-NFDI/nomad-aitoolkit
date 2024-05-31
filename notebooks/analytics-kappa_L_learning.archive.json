@@ -5,12 +5,18 @@
         "description": "Notebook recreating the results of the paper by the same title and authors.",
         "date": "2022-06-17",
         "category": "thermal transport",
-        "tags": [
-            "SISSO",
-            "Sensitivy Analysis"
+        "methods": [
+            {
+                "name": "SISSO"
+            },
+            {
+                "name": "Sensitivy Analysis"
+            }
         ],
         "systems": [
-            "Solid State Crystals"
+            {
+                "name": "Solid State Crystals"
+            }
         ],
         "platform": "Python",
         "authors": [

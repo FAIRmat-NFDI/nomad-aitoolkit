@@ -5,9 +5,11 @@
         "description": "In this tutorial, we show how the atomic-features-package can be accessed and used to explore the atomic features form various sources and to prepare the input features for machine-learning studies.",
         "date": "2021-12-07",
         "category": "query tutorial",
-        "tags": [],
+        "methods": [],
         "systems": [
-            "Atoms"
+            {
+                "name": "Atoms"
+            }
         ],
         "platform": "Python",
         "authors": [

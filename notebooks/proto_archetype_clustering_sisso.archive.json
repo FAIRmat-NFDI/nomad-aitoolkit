@@ -5,12 +5,18 @@
         "description": "In this tutorial two clustering methods, namely unsupervised k-means and supervised deep-aa, will be used to extract proto- and archetypes, respectively, along with corresponding clusters. The set of proto- or archetypes can be used as a substantially reduced training set for Single-Task SISSO, which outperforms random selection, while the corresponding clusters allow for an educated material2task-assignment of all training and test materials for Multi-Task SISSO, whose training on the whole training set outperforms corresponding training of Single-Task SISSO.",
         "date": "2021-12-20",
         "category": "beginner tutorial",
-        "tags": [
-            "Clustering",
-            "SISSO"
+        "methods": [
+            {
+                "name": "Clustering"
+            },
+            {
+                "name": "SISSO"
+            }
         ],
         "systems": [
-            "System"
+            {
+                "name": "System"
+            }
         ],
         "platform": "Python",
         "authors": [
