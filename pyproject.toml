@@ -111,4 +111,4 @@ where = ["src"]
 
 aitookitschema = "nomad_aitoolkit.schema:package"
 aitookitapp = "nomad_aitoolkit.apps:aitoolkit"
-notebookapp = "nomad_aitoolkit.apps:notebook"
+

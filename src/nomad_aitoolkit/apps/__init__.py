@@ -1,4 +1,5 @@
 # ruff: noqa: E501
+from nomad.config import config
 from nomad.config.models.plugins import AppEntryPoint
 from nomad.config.models.ui import (
     AlignEnum,
@@ -15,29 +16,22 @@ from nomad.config.models.ui import (
     ScaleEnum,
     WidgetTerms,
 )
-
-# TODO: At the moment we only support targeting scalar quantities from custom schemas.
-
-# TODO: filters_locked adding upload id (using  parameter=configuration.parameter )
-# class AITollkitAppEntryPoint(AppEntryPoint):
-# ...
-# the upload id is not set then show everything
-# list of uploadids
+from pydantic import Field
 
 
 class AIToolkitAppEntryPoint(AppEntryPoint):
-    pass
+    upload_ids: list[str] = Field(
+        default_factory=list,
+        description='List of upload ids make sure only curated nootbooks are available.',
+    )
 
 
-# from nomad.config import config
+# TODO: apps needs to be lazy loaded
+# Workaround: hardcode upolad_ids OR putting filters_locked into nomad.yaml
+# config.load_plugins()
 # configuration = config.get_plugin_entry_point('nomad_aitoolkit.apps:aitoolkit')
+# print(configuration.upload_ids)
 
-# tools:
-# AI Tollkit Notebooks
-
-# AppEntryPoint
-# filters=Filters(include=['*.#nomad_aitoolkit.schema.package.AIToolkitNotebook'], exclude=[]),
-# filters=Filters(include=['*.#nomad_aitoolkit.schema.package.AIToolkitNotebook'], exclude=['results.*']),
 
 aitoolkit = AIToolkitAppEntryPoint(
     name='AI Toolkit notebooks',
@@ -47,7 +41,6 @@ aitoolkit = AIToolkitAppEntryPoint(
         description='Search AI toolkit notebooks',
         path='ai-toolkit',
         category='Tools',
-        # filters=Filters(include=['*#nomad_aitoolkit.schema.package.AIToolkitNotebook']),
         filters=Filters(
             include=['*#nomad_aitoolkit.schema.package.AIToolkitNotebook'],
             exclude=['*#nomad.datamodel.metainfo.eln.BasicEln'],
@@ -59,31 +52,28 @@ aitoolkit = AIToolkitAppEntryPoint(
             include=[
                 'entry_id',
                 'entry_type',
-                # 'upload_create_time',
                 'authors',
                 # 'references',
+                # 'upload_create_time',
                 'data.name#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.category#nomad_aitoolkit.schema.package.AIToolkitNotebook',
-                # 'data.authors_list#nomad_aitoolkit.schema.package.AIToolkitNotebook',
-                'data.systems#nomad_aitoolkit.schema.package.AIToolkitNotebook',
-                'data.methods#nomad_aitoolkit.schema.package.AIToolkitNotebook',
+                # 'data.systems#nomad_aitoolkit.schema.package.AIToolkitNotebook',
+                # 'data.methods#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.platform#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.date#nomad_aitoolkit.schema.package.AIToolkitNotebook',
             ],
             selected=[
-                # 'entry_id',
                 'data.name#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'authors',
-                # 'data.authors_list#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.category#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.date#nomad_aitoolkit.schema.package.AIToolkitNotebook',
             ],
             options={
                 'entry_id': Column(),
                 'entry_type': Column(label='Entry type', align=AlignEnum.LEFT),
-                # 'upload_create_time': Column(label='Upload time', align=AlignEnum.LEFT),
                 'authors': Column(label='Authors', align=AlignEnum.LEFT),
                 # 'references': Column(label='References', align=AlignEnum.LEFT),
+                # 'upload_create_time': Column(label='Upload time', align=AlignEnum.LEFT),
                 'data.name#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
                     label='Name', align=AlignEnum.LEFT
                 ),
@@ -107,11 +97,6 @@ aitoolkit = AIToolkitAppEntryPoint(
         ),
         filter_menus=FilterMenus(
             options={
-                # 'material': FilterMenu(label='Material'),
-                # 'elements': FilterMenu(
-                #     label='Elements / Formula', level=1, size=FilterMenuSizeEnum.XL
-                # ),
-                # 'structure': FilterMenu(label='Structure', level=1),
                 'custom_quantities': FilterMenu(
                     label='Notebooks', size=FilterMenuSizeEnum.L
                 ),
@@ -163,28 +148,6 @@ aitoolkit = AIToolkitAppEntryPoint(
                     },
                 ),
             ]
-        ),
-    ),
-)
-
-notebook = AppEntryPoint(
-    name='Notebooks',
-    description='App defined using the new plugin mechanism.',
-    app=App(
-        label='Notebooks',
-        description='Search user-defined notebooks',
-        path='notebooks',
-        category='Tools',
-        columns=Columns(
-            selected=['entry_id'],
-            options={
-                'entry_id': Column(),
-            },
-        ),
-        filter_menus=FilterMenus(
-            options={
-                'material': FilterMenu(label='Material'),
-            }
         ),
     ),
 )
