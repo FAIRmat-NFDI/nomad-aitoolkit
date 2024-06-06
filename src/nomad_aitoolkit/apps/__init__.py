@@ -1,5 +1,5 @@
 # ruff: noqa: E501
-from nomad.config import config
+from nomad.config import _plugins
 from nomad.config.models.plugins import AppEntryPoint
 from nomad.config.models.ui import (
     AlignEnum,
@@ -15,8 +15,32 @@ from nomad.config.models.ui import (
     Layout,
     ScaleEnum,
     WidgetTerms,
+    Format,
+    ModeEnum
 )
 from pydantic import Field
+
+# Workaround: read the upload_ids from plugin's raw config.
+try:
+    upload_ids = _plugins['entry_points']['options']['nomad_aitoolkit.apps:aitoolkit'][
+        'upload_ids'
+    ]
+except KeyError:
+    upload_ids = None
+
+if upload_ids:
+    filters_locked = {
+        'upload_id': upload_ids,
+        'section_defs.definition_qualified_name': [
+            'nomad_aitoolkit.schema.package.AIToolkitNotebook'
+        ],
+    }
+else:
+    filters_locked = {
+        'section_defs.definition_qualified_name:all': [
+            'nomad_aitoolkit.schema.package.AIToolkitNotebook'
+        ]
+    }
 
 
 class AIToolkitAppEntryPoint(AppEntryPoint):
@@ -24,13 +48,6 @@ class AIToolkitAppEntryPoint(AppEntryPoint):
         default_factory=list,
         description='List of upload ids make sure only curated nootbooks are available.',
     )
-
-
-# TODO: apps needs to be lazy loaded
-# Workaround: hardcode upolad_ids OR putting filters_locked into nomad.yaml
-# config.load_plugins()
-# configuration = config.get_plugin_entry_point('nomad_aitoolkit.apps:aitoolkit')
-# print(configuration.upload_ids)
 
 
 aitoolkit = AIToolkitAppEntryPoint(
@@ -45,9 +62,7 @@ aitoolkit = AIToolkitAppEntryPoint(
             include=['*#nomad_aitoolkit.schema.package.AIToolkitNotebook'],
             exclude=['*#nomad.datamodel.metainfo.eln.BasicEln'],
         ),
-        filters_locked={
-            'section_defs.definition_qualified_name': 'nomad_aitoolkit.schema.package.AIToolkitNotebook'
-        },
+        filters_locked=filters_locked,
         columns=Columns(
             include=[
                 'entry_id',
@@ -91,7 +106,7 @@ aitoolkit = AIToolkitAppEntryPoint(
                     label='Platform', align=AlignEnum.LEFT
                 ),
                 'data.date#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
-                    label='Upload time', align=AlignEnum.LEFT
+                    label='Upload time', align=AlignEnum.LEFT, format=Format(mode=ModeEnum.DATE)
                 ),
             },
         ),
