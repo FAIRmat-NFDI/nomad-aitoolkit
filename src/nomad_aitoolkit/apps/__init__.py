@@ -12,11 +12,15 @@ from nomad.config.models.ui import (
     FilterMenus,
     FilterMenuSizeEnum,
     Filters,
+    Format,
     Layout,
+    ModeEnum,
+    RowDetails,
+    Rows,
+    RowSelection,
+    RowURLActions,
     ScaleEnum,
     WidgetTerms,
-    Format,
-    ModeEnum
 )
 from pydantic import Field
 
@@ -68,12 +72,8 @@ aitoolkit = AIToolkitAppEntryPoint(
                 'entry_id',
                 'entry_type',
                 'authors',
-                # 'references',
-                # 'upload_create_time',
                 'data.name#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.category#nomad_aitoolkit.schema.package.AIToolkitNotebook',
-                # 'data.systems#nomad_aitoolkit.schema.package.AIToolkitNotebook',
-                # 'data.methods#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.platform#nomad_aitoolkit.schema.package.AIToolkitNotebook',
                 'data.date#nomad_aitoolkit.schema.package.AIToolkitNotebook',
             ],
@@ -87,26 +87,19 @@ aitoolkit = AIToolkitAppEntryPoint(
                 'entry_id': Column(),
                 'entry_type': Column(label='Entry type', align=AlignEnum.LEFT),
                 'authors': Column(label='Authors', align=AlignEnum.LEFT),
-                # 'references': Column(label='References', align=AlignEnum.LEFT),
-                # 'upload_create_time': Column(label='Upload time', align=AlignEnum.LEFT),
                 'data.name#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
                     label='Name', align=AlignEnum.LEFT
                 ),
                 'data.category#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
                     label='Category'
                 ),
-                # 'data.systems#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
-                #     label='Systems'
-                # ),
-                # 'data.authors_list#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
-                #     label='Authors',
-                #     align=AlignEnum.LEFT
-                # ),
                 'data.platform#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
                     label='Platform', align=AlignEnum.LEFT
                 ),
                 'data.date#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
-                    label='Upload time', align=AlignEnum.LEFT, format=Format(mode=ModeEnum.DATE)
+                    label='Upload time',
+                    align=AlignEnum.LEFT,
+                    format=Format(mode=ModeEnum.DATE),
                 ),
             },
         ),
@@ -163,6 +156,11 @@ aitoolkit = AIToolkitAppEntryPoint(
                     },
                 ),
             ]
+        ),
+        rows=Rows(
+            actions=RowURLActions(enabled=True, label='Launch notebook'),
+            details=RowDetails(enabled=True),
+            selection=RowSelection(enabled=True),
         ),
     ),
 )
