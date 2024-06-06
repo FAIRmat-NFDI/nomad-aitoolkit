@@ -41,7 +41,7 @@ if upload_ids:
     }
 else:
     filters_locked = {
-        'section_defs.definition_qualified_name:all': [
+        'section_defs.definition_qualified_name': [
             'nomad_aitoolkit.schema.package.AIToolkitNotebook'
         ]
     }
