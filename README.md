@@ -70,24 +70,18 @@ on the [PyPI documentation](https://packaging.python.org/en/latest/tutorials/pac
 
 ### Documentation on Github pages
 
-To deploy documentation on Github pages, make sure to [enable GitHub pages via the repo settings](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch). 
+To deploy documentation on Github pages, make sure to [enable GitHub pages via the repo settings](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch).
 
 To view the documentation locally, install the documentation related packages using:
 
 ```sh
-pip install -r requirements_docs.txt
+pip install -e '.[docs]'
 ```
 
 Run the documentation server:
 ```sh
 mkdocs serve
 ```
-
-### Template update
-
-We use cruft to update the project based on template changes. A `cruft-update.yml` is included in Github workflows to automatically check for updates and create pull requests to apply updates. Follow the [instructions](https://github.blog/changelog/2022-05-03-github-actions-prevent-github-actions-from-creating-and-approving-pull-requests/) on how to enable Github Actions to create pull requests. 
-
-To run the check for updates locally, follow the instructions on [`cruft` website](https://cruft.github.io/cruft/#updating-a-project).
 
 ### License
 Distributed under the terms of the `Apache Software License 2.0`_ license, "nomad-aitoolkit" is free and open source software
