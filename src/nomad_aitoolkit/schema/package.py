@@ -43,10 +43,8 @@ class Method(ArchiveSection):
 
     name = Quantity(
         type=str,
-        a_eln=ELNAnnotation(
-            component=ELNComponentEnum.StringEditQuantity, label='Name'
-        ),
-        description='For testing subsection quantity.',
+        a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
+        description='Specifying the name of method.',
     )
 
 
@@ -55,10 +53,8 @@ class System(ArchiveSection):
 
     name = Quantity(
         type=str,
-        a_eln=ELNAnnotation(
-            component=ELNComponentEnum.StringEditQuantity, label='Name'
-        ),
-        description='For testing subsection quantity.',
+        a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
+        description='Specifying name of the system.',
     )
 
 
@@ -68,17 +64,17 @@ class Author(ArchiveSection):
     first_name = Quantity(
         type=str,
         a_eln=ELNAnnotation(
-            component=ELNComponentEnum.StringEditQuantity, label='Name'
+            component=ELNComponentEnum.StringEditQuantity, label='First Name'
         ),
-        description='For testing subsection quantity.',
+        description='First name of the author',
     )
 
     last_name = Quantity(
         type=str,
         a_eln=ELNAnnotation(
-            component=ELNComponentEnum.StringEditQuantity, label='Name'
+            component=ELNComponentEnum.StringEditQuantity, label='Last Name'
         ),
-        description='For testing subsection quantity.',
+        description='Last name of the author.',
     )
 
 
@@ -106,80 +102,57 @@ class Reference(ArchiveSection):
 
     name = Quantity(
         type=str,
-        a_eln=ELNAnnotation(
-            component=ELNComponentEnum.StringEditQuantity, label='Name'
-        ),
-        description='For testing subsection quantity.',
+        a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
+        description='Human readable name for the reference.',
     )
 
     description = Quantity(
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.RichTextEditQuantity),
-        description='For testing enum field.',
+        description='Extra details about the reference.',
     )
 
     uri = Quantity(
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.URLEditQuantity, label='URI'),
-        description='For testing subsection quantity.',
+        description='External URI for the reference.',
     )
 
     version = Quantity(
         type=str,
-        a_eln=ELNAnnotation(
-            component=ELNComponentEnum.StringEditQuantity, label='Name'
-        ),
-        description='For testing subsection quantity.',
+        a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
+        description='Optional field to adding version information.',
     )
-
-    def normalize(self, archive: 'EntryArchive', logger: 'BoundLogger') -> None:
-        super().normalize(archive, logger)
 
 
 class AIToolkitNotebook(Schema):
     m_def = Section(
         label='AI Toolkit Notebook',
         categories=[ToolsCategory],
-        a_eln=ELNAnnotation(
-            properties=dict(
-                # order=[
-                #     'name',
-                #     'description',
-                #     'date',
-                #     'authors',
-                #     'category',
-                #     'methods',
-                #     'systems',
-                #     'platform',
-                #     'references',
-                # ]
-            )
-        ),
+        a_eln=ELNAnnotation(),
     )
 
     name = Quantity(
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
         label='Name/Title',
-        description='For testing string field.',
+        description='The short name of the AI Toolkit.',
     )
 
     description = Quantity(
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.RichTextEditQuantity),
-        description='For testing enum field.',
+        description='Short description of the AI Toolkit',
     )
 
     date = Quantity(
         type=Datetime,
         a_eln=ELNAnnotation(component=ELNComponentEnum.DateEditQuantity),
-        description='For testing datetime field.',
+        label='Last update',
+        description='The date of the last update.',
     )
 
-    authors = SubSection(section=Author, repeats=True)
-
     category = Quantity(
-        label='User defined category',
         type=str,
         a_eln=ELNAnnotation(
             component=ELNComponentEnum.EnumEditQuantity,
@@ -195,16 +168,18 @@ class AIToolkitNotebook(Schema):
         ),
     )
 
-    methods = SubSection(section=Method, repeats=True)
-
-    systems = SubSection(section=System, repeats=True)
-
     platform = Quantity(
         type=MEnum(['Python', 'Julia', 'R', 'other']),
         a_eln=ELNAnnotation(
             component=ELNComponentEnum.AutocompleteEditQuantity,
         ),
     )
+
+    authors = SubSection(section=Author, repeats=True)
+
+    methods = SubSection(section=Method, repeats=True)
+
+    systems = SubSection(section=System, repeats=True)
 
     references = SubSection(section=Reference, repeats=True)
 
@@ -222,21 +197,10 @@ class AIToolkitNotebook(Schema):
 
             archive.metadata.comment = comment
 
-        logger.info('AIToolkitNotebook.normalize', parameter=configuration.parameter)
-
-        # This is a workaround to use Author field on the gui
         if self.authors:
             archive.metadata.entry_coauthors = [
                 NomadAuthor(**author.m_to_dict()) for author in self.authors
             ]
-
-        if self.references:
-            for reference in self.references:
-                if reference.kind != 'hub':
-                    continue
-                print(reference.uri)
-                archive.metadata.default_launch_url = reference.uri
-                break
 
 
 m_package.__init_metainfo__()

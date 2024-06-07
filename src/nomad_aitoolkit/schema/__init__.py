@@ -1,10 +1,7 @@
 from nomad.config.models.plugins import SchemaPackageEntryPoint
-from pydantic import Field
 
 
 class AIToolkitSchemaPackageEntryPoint(SchemaPackageEntryPoint):
-    parameter: int = Field(0, description='Custom configuration parameter')
-
     def load(self):
         from nomad_aitoolkit.schema.package import m_package
 
@@ -13,6 +10,5 @@ class AIToolkitSchemaPackageEntryPoint(SchemaPackageEntryPoint):
 
 package = AIToolkitSchemaPackageEntryPoint(
     name='AIToolkit',
-    description='Describes the basic schemas for user-defined and ' \
-        'ai toolkit notebooks using the new plugin mechanism.',
+    description='Describes the basic schemas for AI Toolkit notebooks.',
 )

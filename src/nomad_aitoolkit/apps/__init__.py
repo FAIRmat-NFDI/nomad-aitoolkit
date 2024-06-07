@@ -23,7 +23,6 @@ from nomad.config.models.ui import (
     ScaleEnum,
     WidgetTerms,
 )
-from pydantic import Field
 
 # Workaround: read the upload_ids from plugin's raw config.
 try:
@@ -48,14 +47,7 @@ else:
     }
 
 
-class AIToolkitAppEntryPoint(AppEntryPoint):
-    upload_ids: list[str] = Field(
-        default_factory=list,
-        description='List of upload ids make sure only curated nootbooks are available.',
-    )
-
-
-aitoolkit = AIToolkitAppEntryPoint(
+aitoolkit = AppEntryPoint(
     name='AI Toolkit notebooks',
     description='App defined using the new plugin mechanism.',
     app=App(
@@ -109,11 +101,8 @@ aitoolkit = AIToolkitAppEntryPoint(
                 'custom_quantities': FilterMenu(
                     label='Notebooks', size=FilterMenuSizeEnum.L
                 ),
-                'author': FilterMenu(
-                    label='Author / Origin / Dataset', size=FilterMenuSizeEnum.M
-                ),
-                'metadata': FilterMenu(label='Visibility / IDs / Schema'),
-                'optimade': FilterMenu(label='Optimade', size=FilterMenuSizeEnum.M),
+                'author': FilterMenu(label='Author', size=FilterMenuSizeEnum.M),
+                'metadata': FilterMenu(label='Visibility / IDs'),
             }
         ),
         dashboard=Dashboard(
@@ -126,8 +115,8 @@ aitoolkit = AIToolkitAppEntryPoint(
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.XL: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.LG: Layout(h=6, w=6, x=0, y=0),
-                        BreakpointEnum.MD: Layout(h=4, w=6, x=0, y=0),
-                        BreakpointEnum.SM: Layout(h=3, w=6, x=0, y=0),
+                        BreakpointEnum.MD: Layout(h=6, w=6, x=0, y=0),
+                        BreakpointEnum.SM: Layout(h=6, w=6, x=0, y=0),
                     },
                 ),
                 WidgetTerms(
@@ -139,8 +128,8 @@ aitoolkit = AIToolkitAppEntryPoint(
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.XL: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.LG: Layout(h=6, w=6, x=6, y=0),
-                        BreakpointEnum.MD: Layout(h=4, w=6, x=6, y=0),
-                        BreakpointEnum.SM: Layout(h=3, w=6, x=6, y=0),
+                        BreakpointEnum.MD: Layout(h=6, w=6, x=6, y=0),
+                        BreakpointEnum.SM: Layout(h=6, w=6, x=6, y=0),
                     },
                 ),
                 WidgetTerms(
@@ -152,8 +141,8 @@ aitoolkit = AIToolkitAppEntryPoint(
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.XL: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.LG: Layout(h=6, w=6, x=12, y=0),
-                        BreakpointEnum.MD: Layout(h=4, w=6, x=12, y=0),
-                        BreakpointEnum.SM: Layout(h=3, w=6, x=12, y=0),
+                        BreakpointEnum.MD: Layout(h=6, w=6, x=12, y=0),
+                        BreakpointEnum.SM: Layout(h=6, w=6, x=12, y=0),
                     },
                 ),
             ]
