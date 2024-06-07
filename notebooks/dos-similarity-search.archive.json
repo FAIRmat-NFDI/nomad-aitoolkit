@@ -1,0 +1,54 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "Electronic density-of-states similarity search",
+    "description": "This notebook shows how to compute the similarity of materials in terms of their electronic density-of-states (DOS), from data retrieved from the NOMAD Archive.",
+    "date": "2022-03-30",
+    "category": "intermediate_tutorial",
+    "methods": [
+      {
+        "name": "Similarity search"
+      },
+      {
+        "name": "Fingerprint"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Binaries"
+      },
+      {
+        "name": "Ternaries"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Gabaj",
+        "first_name": "\u0160imon"
+      },
+      {
+        "last_name": "Kuban",
+        "first_name": "Martin"
+      },
+      {
+        "last_name": "Rigamonti",
+        "first_name": "Santiago"
+      },
+      {
+        "last_name": "Draxl",
+        "first_name": "Claudia"
+      }
+    ],
+    "references": [
+      {
+        "kind": "hub",
+        "uri": "https://analytics-toolkit.nomad-coe.eu/public/user-redirect/notebooks/tutorials/dos_similarity_search.ipynb"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-dos-similarity-search"
+      }
+    ]
+  }
+}

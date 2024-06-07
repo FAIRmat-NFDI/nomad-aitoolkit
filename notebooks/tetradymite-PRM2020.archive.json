@@ -1,0 +1,74 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "Discovery of new topological insulators in alloyed tetradymites",
+    "description": "Learn how to find descriptive parameters (short formulas) that predict whether alloyed materials are topological or trivial insulators, using the example of tetradymites. This notebook is based on the algorithm 'sure independence screening and sparsifying operator' (SISSO) that enables to search for optimal descriptor by scanning huge feature spaces.",
+    "date": "2020-09-15",
+    "category": "advanced_tutorial",
+    "methods": [
+      {
+        "name": "Supervised learning"
+      },
+      {
+        "name": "Classification"
+      },
+      {
+        "name": "Symbolic regression"
+      },
+      {
+        "name": "Features selection"
+      },
+      {
+        "name": "Atomic features"
+      },
+      {
+        "name": "SISSO"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Tetradymites"
+      },
+      {
+        "name": "Topological insulators"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Sbail\u00f2",
+        "first_name": "Luigi"
+      },
+      {
+        "last_name": "Purcell",
+        "first_name": "Thomas A. R."
+      },
+      {
+        "last_name": "Ghiringhelli",
+        "first_name": "Luca M."
+      },
+      {
+        "last_name": "Scheffler",
+        "first_name": "Matthias"
+      }
+    ],
+    "references": [
+      {
+        "kind": "article_doi",
+        "uri": "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.4.034204"
+      },
+      {
+        "kind": "hub",
+        "uri": "https://analytics-toolkit.nomad-coe.eu/public/user-redirect/notebooks/tutorials/tetradymite_PRM2020.ipynb"
+      },
+      {
+        "kind": "article_url",
+        "uri": "https://th.fhi.mpg.de/site/uploads/Publications/PhysRevMaterials.4.034204.pdf"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-tetradymite-PRM2020"
+      }
+    ]
+  }
+}

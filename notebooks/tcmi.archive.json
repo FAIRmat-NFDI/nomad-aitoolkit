@@ -1,0 +1,79 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "Introduction to total cumulative mutual information",
+    "description": "This interactive notebook introduces the concepts and original implementation of total cumulative mutual information (TCMI), as presented in the related publication. The main results of the publication are also reproduced in a hands-on style",
+    "date": "2020-02-06",
+    "category": "advanced_tutorial",
+    "methods": [
+      {
+        "name": "Supervised learning"
+      },
+      {
+        "name": "Unsupervised learning"
+      },
+      {
+        "name": "Features selection"
+      },
+      {
+        "name": "Information theory"
+      },
+      {
+        "name": "Mutual information"
+      },
+      {
+        "name": "Cumulative entropy"
+      },
+      {
+        "name": "Clustering"
+      },
+      {
+        "name": "TCMI"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Synthetic data"
+      },
+      {
+        "name": "UCI regression dataset"
+      },
+      {
+        "name": "Octet binaries"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Regler",
+        "first_name": "Benjamin"
+      },
+      {
+        "last_name": "Scheffler",
+        "first_name": "Matthias"
+      },
+      {
+        "last_name": "Ghiringhelli",
+        "first_name": "Luca M."
+      }
+    ],
+    "references": [
+      {
+        "kind": "article_doi",
+        "uri": "https://arxiv.org/abs/2001.11212"
+      },
+      {
+        "kind": "hub",
+        "uri": "https://analytics-toolkit.nomad-coe.eu/public/user-redirect/notebooks/tutorials/tcmi.ipynb"
+      },
+      {
+        "kind": "article_url",
+        "uri": "https://arxiv.org/pdf/2001.11212"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-tcmi"
+      }
+    ]
+  }
+}

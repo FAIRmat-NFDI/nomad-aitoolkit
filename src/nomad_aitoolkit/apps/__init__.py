@@ -90,7 +90,7 @@ aitoolkit = AppEntryPoint(
                     label='Platform', align=AlignEnum.LEFT
                 ),
                 'data.date#nomad_aitoolkit.schema.package.AIToolkitNotebook': Column(
-                    label='Upload time',
+                    label='Last update',
                     align=AlignEnum.LEFT,
                     format=Format(mode=ModeEnum.DATE),
                 ),
