@@ -1,0 +1,85 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "ARISE - Robust recognition and exploratory analysis of crystal structures via Bayesian deep learning",
+    "description": "In this tutorial, we give an introduction to ARISE (ARtificial-Intelligence-based Structure Evaluation), a powerful Bayesian-deep-neural-network tool for the recognition of atomistic structures (A. Leitherer, A. Ziletti, and L.M. Ghiringhelli, Nat. Commun. 12, 6234, 2021). ARISE is robust to structural noise and can treat more than 100 crystal structures, a number that can be extended on demand. While being trained on ideal structures only, ARISE correctly characterizes strongly perturbed single- and polycrystalline systems, from both synthetic and experimental resources. The probabilistic nature of the Bayesian-deep-learning model allows to obtain principled uncertainty estimates. By applying unsupervised learning to the internal neural-network representations, one can reveal grain boundaries and (unapparent) structural regions sharing easily interpretable geometrical properties.",
+    "date": "2021-03-22",
+    "category": "advanced_tutorial",
+    "methods": [
+      {
+        "name": "Supervised learning"
+      },
+      {
+        "name": "Neural networks"
+      },
+      {
+        "name": "Bayesian deep learning"
+      },
+      {
+        "name": "Unsupervised learning"
+      },
+      {
+        "name": "Clustering"
+      },
+      {
+        "name": "Dimension reduction"
+      },
+      {
+        "name": "HDBSCAN"
+      },
+      {
+        "name": "UMAP"
+      },
+      {
+        "name": "SOAP"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Grain boundaries"
+      },
+      {
+        "name": "Binaries"
+      },
+      {
+        "name": "Ternaries"
+      },
+      {
+        "name": "Low-dimensional materials"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Leitherer",
+        "first_name": "Andreas"
+      },
+      {
+        "last_name": "Ziletti",
+        "first_name": "Angelo"
+      },
+      {
+        "last_name": "Ghiringhelli",
+        "first_name": "Luca M."
+      }
+    ],
+    "references": [
+      {
+        "kind": "article_doi",
+        "uri": "https://www.nature.com/articles/s41467-021-26511-5"
+      },
+      {
+        "kind": "hub",
+        "uri": "https://analytics-toolkit.nomad-coe.eu/public/user-redirect/notebooks/tutorials/ARISE.ipynb"
+      },
+      {
+        "kind": "article_url",
+        "uri": "https://www.nature.com/articles/s41467-021-26511-5.pdf"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-arise"
+      }
+    ]
+  }
+}

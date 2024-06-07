@@ -1,0 +1,49 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "Introduction to kernel ridge regression for materials-property prediction",
+    "description": "In this tutorial, we will explore the application of kernel ridge regression to the prediction of materials properties. We will begin with a largely informal, pragmatic introduction to kernel ridge regression, including a rudimentary implementation, in order to become familiar with the basic terminology and considerations. We will then discuss representations, and re-trace the NOMAD 2018 Kaggle challenge.",
+    "date": "2020-12-15",
+    "category": "beginner_tutorial",
+    "methods": [
+      {
+        "name": "Supervised learning"
+      },
+      {
+        "name": "Regression"
+      },
+      {
+        "name": "Kernel ridge regression"
+      },
+      {
+        "name": "SOAP"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Transparent conducting oxides"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Langer",
+        "first_name": "Marcel F."
+      }
+    ],
+    "references": [
+      {
+        "kind": "hub",
+        "uri": "https://analytics-toolkit.nomad-coe.eu/public/user-redirect/notebooks/tutorials/krr4mat.ipynb"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-krr4mat"
+      },
+      {
+        "kind": "video",
+        "uri": "https://www.youtube.com/watch?v=H_MVlljpYHw"
+      }
+    ]
+  }
+}

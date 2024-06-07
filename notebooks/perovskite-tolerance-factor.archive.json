@@ -1,0 +1,85 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "Finding a tolerance factor to predict perovskite stability with SISSO",
+    "description": "This tutorial shows how a tolerance factor for predicting perovskite stability can be learned from data with the sure-independece-screening-and-sparsifying-operator (SISSO) descriptor-identification approach.",
+    "date": "2022-05-18",
+    "category": "advanced_tutorial",
+    "methods": [
+      {
+        "name": "Supervised learning"
+      },
+      {
+        "name": "Classification"
+      },
+      {
+        "name": "Symbolic regression"
+      },
+      {
+        "name": "Compressed sensing"
+      },
+      {
+        "name": "SISSO"
+      },
+      {
+        "name": "Decision tree"
+      },
+      {
+        "name": "Features selection"
+      },
+      {
+        "name": "Atomic features"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Perovskites"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Foppa",
+        "first_name": "Lucas"
+      },
+      {
+        "last_name": "Hassanzada",
+        "first_name": "Qaem"
+      },
+      {
+        "last_name": "Bartel",
+        "first_name": "Christopher"
+      },
+      {
+        "last_name": "Purcell",
+        "first_name": "Thomas"
+      },
+      {
+        "last_name": "Sbail\u00f2",
+        "first_name": "Luigi"
+      },
+      {
+        "last_name": "Ghiringhelli",
+        "first_name": "Luca M."
+      }
+    ],
+    "references": [
+      {
+        "kind": "article_doi",
+        "uri": "https://doi.org/10.1126/sciadv.aav0693"
+      },
+      {
+        "kind": "hub",
+        "uri": "https://analytics-toolkit.nomad-coe.eu/public/user-redirect/notebooks/tutorials/perovskites_tolerance_factor.ipynb"
+      },
+      {
+        "kind": "article_url",
+        "uri": "https://advances.sciencemag.org/content/advances/5/2/eaav0693.full.pdf"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-perovskite-tolerance-factor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "data": {
+    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "name": "Introduction to multilayer perceptrons (deep neural networks)",
+    "description": "In this tutorial, we discuss how multilayer perceptrons, a standard neural-network architecture, can be employed for regression tasks. Specifically, we will use the ElemNet neural-network architecture to predict the volume per atom of inorganic compounds, where the Open Quantum Materials Database (OQMD) is used as a resource.",
+    "date": "2021-01-29",
+    "category": "beginner_tutorial",
+    "methods": [
+      {
+        "name": "Supervised learning"
+      },
+      {
+        "name": "Regression"
+      },
+      {
+        "name": "Neural networks"
+      },
+      {
+        "name": "Deep neural networks"
+      },
+      {
+        "name": "Atomic features"
+      }
+    ],
+    "systems": [
+      {
+        "name": "Inorganic compounds"
+      },
+      {
+        "name": "OQMD database"
+      }
+    ],
+    "platform": "Python",
+    "authors": [
+      {
+        "last_name": "Leitherer",
+        "first_name": "Andreas"
+      },
+      {
+        "last_name": "Sbail\u00f2",
+        "first_name": "Luigi"
+      },
+      {
+        "last_name": "Ghiringhelli",
+        "first_name": "Luca M."
+      }
+    ],
+    "references": [
+      {
+        "kind": "hub",
+        "uri": "https://nomad-lab.eu/prod/analytics/public/user-redirect/notebooks/tutorials/nn_regression.ipynb"
+      },
+      {
+        "kind": "repository",
+        "uri": "https://gitlab.mpcdf.mpg.de/nomad-lab/analytics-nn-regression"
+      },
+      {
+        "kind": "video",
+        "uri": "https://www.youtube.com/watch?v=U0lI5n8Hleo"
+      }
+    ]
+  }
+}

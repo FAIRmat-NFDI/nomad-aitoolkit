@@ -1,0 +1,26 @@
+{
+  "template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin",
+  "commit": "9fd908197243621152ebf13626786c92df784fd0",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Adam Fekete",
+      "email": "adam.fekete@hu-berlin.de",
+      "github_username": "fekad",
+      "plugin_name": "aitoolkit",
+      "module_name": "aitoolkit",
+      "short_description": "Schema and app for AI Toolkit notebooks.",
+      "version": "0.1.0",
+      "license": "Apache Software License 2.0",
+      "include_schema_package": true,
+      "include_normalizer": true,
+      "include_parser": false,
+      "include_app": true,
+      "_copy_without_render": [
+        "*.html"
+      ],
+      "_template": "https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin"
+    }
+  },
+  "directory": null
+}
