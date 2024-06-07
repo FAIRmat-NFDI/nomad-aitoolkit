@@ -15,10 +15,11 @@ from nomad.config.models.ui import (
     Format,
     Layout,
     ModeEnum,
+    RowActions,
+    RowActionURL,
     RowDetails,
     Rows,
     RowSelection,
-    RowURLActions,
     ScaleEnum,
     WidgetTerms,
 )
@@ -158,7 +159,16 @@ aitoolkit = AIToolkitAppEntryPoint(
             ]
         ),
         rows=Rows(
-            actions=RowURLActions(enabled=True, label='Launch notebook'),
+            actions=RowActions(
+                enabled=True,
+                options={
+                    'launch': RowActionURL(
+                        type='url',
+                        path="data.references[?kind=='hub'].uri",
+                        description='Launch Jupyter notebook',
+                    )
+                },
+            ),
             details=RowDetails(enabled=True),
             selection=RowSelection(enabled=True),
         ),
