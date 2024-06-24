@@ -3,7 +3,7 @@ from nomad.config.models.plugins import SchemaPackageEntryPoint
 
 class AIToolkitSchemaPackageEntryPoint(SchemaPackageEntryPoint):
     def load(self):
-        from nomad_aitoolkit.schema.package import m_package
+        from nomad_aitoolkit.schema.aitoolkit import m_package
 
         return m_package
 
