@@ -23,7 +23,6 @@ from nomad.metainfo import (
     SubSection,
 )
 
-
 m_package = SchemaPackage(name='AI Toolkit Notebook schema')
 
 
