@@ -15,7 +15,7 @@ classifiers = [
 ]
 name = "nomad-aitoolkit"
 description = "Schema and app for AI Toolkit notebooks."
-version = "0.1.0"
+version = "0.1.1"
 readme = "README.rst"
 requires-python = ">=3.9"
 authors = [
@@ -109,7 +109,6 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-
-aitookitschema = "nomad_aitoolkit.schema:package"
+aitookitschema = "nomad_aitoolkit.schema:aitoolkit"
 aitookitapp = "nomad_aitoolkit.apps:aitoolkit"
 

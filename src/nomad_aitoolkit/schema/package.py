@@ -24,7 +24,7 @@ from nomad.metainfo import (
     SubSection,
 )
 
-configuration = config.get_plugin_entry_point('nomad_aitoolkit.schema:package')
+configuration = config.get_plugin_entry_point('nomad_aitoolkit.schema:aitoolkit')
 
 
 def remove_tags(text):
