@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Predicting energy differences between crystal structures: (Meta-)stability of octet-binary compounds",
     "description": "A tool for predicting the difference in the total energy between different polymorphs for 82 octet binary compounds, which gives an indication of the stability of the material. This is accomplished by identifying a set of descriptive parameters (a descriptor) from the free-atom data for the binary atomic species comprising the material using the Sure Independent Screening (SIS) + l0-norm minimization approach.",
     "date": "2021-10-18",

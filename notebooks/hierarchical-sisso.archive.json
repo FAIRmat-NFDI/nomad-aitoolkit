@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Hierarchical symbolic regression for identifying key physical parameters correlated with materials properties",
     "description": "In this notebook, we describe a hierarchical symbolic-regression approach for finding, based on data, analytical expressions relating materials properties to simpler physicochemical parameters associated with the underlying processes governing the properties.",
     "date": "2022-8-3",

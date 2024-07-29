@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Introduction to clustering",
     "description": "In this tutorial, we introduce to the most popular clustering algorithms. We focus on partitioning, hierarchical and density-based clustering algorithms. The methods are tested on synthetic datasets of increasing complexity",
     "date": "2021-01-21",

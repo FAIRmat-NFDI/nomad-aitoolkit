@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Finding a tolerance factor to predict perovskite stability with SISSO",
     "description": "This tutorial shows how a tolerance factor for predicting perovskite stability can be learned from data with the sure-independece-screening-and-sparsifying-operator (SISSO) descriptor-identification approach.",
     "date": "2022-05-18",
