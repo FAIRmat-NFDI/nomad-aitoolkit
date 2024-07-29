@@ -109,6 +109,6 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-aitookitschema = "nomad_aitoolkit.schema:aitoolkit"
+aitookitschema = "nomad_aitoolkit:aitoolkit"
 aitookitapp = "nomad_aitoolkit.apps:aitoolkit"
 

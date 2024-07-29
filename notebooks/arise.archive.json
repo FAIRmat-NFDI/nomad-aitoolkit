@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "ARISE - Robust recognition and exploratory analysis of crystal structures via Bayesian deep learning",
     "description": "In this tutorial, we give an introduction to ARISE (ARtificial-Intelligence-based Structure Evaluation), a powerful Bayesian-deep-neural-network tool for the recognition of atomistic structures (A. Leitherer, A. Ziletti, and L.M. Ghiringhelli, Nat. Commun. 12, 6234, 2021). ARISE is robust to structural noise and can treat more than 100 crystal structures, a number that can be extended on demand. While being trained on ideal structures only, ARISE correctly characterizes strongly perturbed single- and polycrystalline systems, from both synthetic and experimental resources. The probabilistic nature of the Bayesian-deep-learning model allows to obtain principled uncertainty estimates. By applying unsupervised learning to the internal neural-network representations, one can reveal grain boundaries and (unapparent) structural regions sharing easily interpretable geometrical properties.",
     "date": "2021-03-22",

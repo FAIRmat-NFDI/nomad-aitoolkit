@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "2018 NOMAD-Kaggle research competition",
     "description": "In this tutorial, we will explore the best results of the NOMAD 2018 Kaggle research competition. The goal of this competition was to develop machine-learning models for the prediction of two target properties: the formation energy and the bandgap energy of transparent semiconducting oxides. The purpose of the modelling is to facilitate the discovery of new such materials and allow for advancements in (opto)electronic technologies",
     "date": "2021-01-19",

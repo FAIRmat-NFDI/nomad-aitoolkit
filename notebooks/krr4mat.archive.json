@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Introduction to kernel ridge regression for materials-property prediction",
     "description": "In this tutorial, we will explore the application of kernel ridge regression to the prediction of materials properties. We will begin with a largely informal, pragmatic introduction to kernel ridge regression, including a rudimentary implementation, in order to become familiar with the basic terminology and considerations. We will then discuss representations, and re-trace the NOMAD 2018 Kaggle challenge.",
     "date": "2020-12-15",

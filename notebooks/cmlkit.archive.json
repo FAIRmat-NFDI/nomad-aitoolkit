@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "cmlkit: Toolkit for Machine Learning in Materials Science and Quantum Chemistry",
     "description": "In this tutorial, we will get to know cmlkit, a python package for specifying, evaluating, and optimising machine learning models, and use it to compete in the Nomad 2018 Kaggle challenge.",
     "date": "2021-01-14",

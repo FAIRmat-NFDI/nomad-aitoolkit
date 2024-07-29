@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Introduction to subgroup discovery: Identifying outstanding transition-metal-alloy catalysts",
     "description": "This tutorial introduces, by means of two applications in materials science, the artificial-intelligence technique subgroup discovery.",
     "date": "2021-10-28",

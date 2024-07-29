@@ -1,6 +1,6 @@
 {
   "data": {
-    "m_def": "nomad_aitoolkit.schema.package.AIToolkitNotebook",
+    "m_def": "nomad_aitoolkit.schema.AIToolkitNotebook",
     "name": "Learning Design Rules for Catalysts from High-Throughput Experimentation and Theory via Subgroup Discovery",
     "description": "This tutorial explores the application of subgroup discovery (SGD) to an experimental-theoretical data set in order to identify rules on key physicochemical parameters that describe the materials and environmental conditions associated with outstanding performance in heterogeneous catalysis.",
     "date": "2022-2-09",
