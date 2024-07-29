@@ -6,7 +6,6 @@ if TYPE_CHECKING:
 
 import xml
 
-from nomad.config import config
 from nomad.datamodel.data import (
     ArchiveSection,
     EntryDataCategory,
@@ -23,8 +22,6 @@ from nomad.metainfo import (
     Section,
     SubSection,
 )
-
-# configuration = config.get_plugin_entry_point('nomad_aitoolkit:aitoolkit')
 
 
 m_package = SchemaPackage(name='AI Toolkit Notebook schema')
