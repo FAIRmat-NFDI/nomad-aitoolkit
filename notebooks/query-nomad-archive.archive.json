@@ -4,7 +4,7 @@
     "name": "Querying the NOMAD Archive and performing artificial-intelligence modeling",
     "description": "In this tutorial, we demonstrate how to query the NOMAD Archive from the NOMAD Analytics toolkit. We then show examples of machine learning analysis performed on the retrieved data set.",
     "date": "2022-04-06",
-    "category": "query_tutorial",
+    "category": "Query tutorial",
     "methods": [
       {
         "name": "Unsupervised learning"

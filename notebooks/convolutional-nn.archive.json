@@ -4,7 +4,7 @@
     "name": "Introduction to convolutional neural networks",
     "description": "In this tutorial, we briefly introduce the main ideas behind convolutional neural networks, build a neural network model with Keras, and explain the classification decision process using attentive response maps.",
     "date": "2021-01-29",
-    "category": "intermediate_tutorial",
+    "category": "Intermediate tutorial",
     "methods": [
       {
         "name": "Supervised learning"

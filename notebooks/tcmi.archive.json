@@ -4,7 +4,7 @@
     "name": "Introduction to total cumulative mutual information",
     "description": "This interactive notebook introduces the concepts and original implementation of total cumulative mutual information (TCMI), as presented in the related publication. The main results of the publication are also reproduced in a hands-on style",
     "date": "2020-02-06",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"

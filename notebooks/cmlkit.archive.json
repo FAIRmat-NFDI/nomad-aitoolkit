@@ -4,7 +4,7 @@
     "name": "cmlkit: Toolkit for Machine Learning in Materials Science and Quantum Chemistry",
     "description": "In this tutorial, we will get to know cmlkit, a python package for specifying, evaluating, and optimising machine learning models, and use it to compete in the Nomad 2018 Kaggle challenge.",
     "date": "2021-01-14",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"

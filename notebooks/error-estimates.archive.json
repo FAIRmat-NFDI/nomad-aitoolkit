@@ -4,7 +4,7 @@
     "name": "Error estimates from high-accuracy electronic-structure reference calculations",
     "description": "A set of tools to analyze the error in electronic structure calculations due to the choice of numerical settings. We use the NOMAD infrastructure to systematically investigate the deviances in total and relative energies as function of typical settings for basis sets, k-grids, etc. for 71 elemental and 81 binary solids in three different electronic-structure codes.",
     "date": "2021-01-21",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"

@@ -134,8 +134,8 @@ aitoolkit = AppEntryPoint(
                 ),
                 WidgetTerms(
                     type='terms',
-                    quantity='data.systems.name#nomad_aitoolkit.schema.AIToolkitNotebook',
-                    title='Systems',
+                    quantity='data.applications.name#nomad_aitoolkit.schema.AIToolkitNotebook',
+                    title='Applications',
                     scale=ScaleEnum.POW1,
                     layout={
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=12, y=0),
@@ -155,7 +155,12 @@ aitoolkit = AppEntryPoint(
                         type='url',
                         path="data.references[?kind=='hub'].uri",
                         description='Launch Jupyter notebook',
-                    )
+                    ),
+                    'repository': RowActionURL(
+                        type='downloadurl',
+                        path="data.references[?kind=='repository'].uri",
+                        description='Link to the repository',
+                    ),
                 },
             ),
             details=RowDetails(enabled=True),

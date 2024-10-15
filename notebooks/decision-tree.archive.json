@@ -4,7 +4,7 @@
     "name": "Introduction to decision-trees methods",
     "description": "In this tutorial we will introduce decision trees. We go through a toy model introducing the SKLearn API. We then discuss step by step the different theoretical aspects of trees. We then move to training a regression tree and classification tree on different datasets related to materials science. We end the tutorial by covering random forests and bagging classfiers.",
     "date": "2020-12-08",
-    "category": "beginner_tutorial",
+    "category": "Beginner tutorial",
     "methods": [
       {
         "name": "Supervised learning"

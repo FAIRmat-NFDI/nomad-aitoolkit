@@ -4,7 +4,7 @@
     "name": "Introduction to subgroup discovery: Identifying outstanding transition-metal-alloy catalysts",
     "description": "This tutorial introduces, by means of two applications in materials science, the artificial-intelligence technique subgroup discovery.",
     "date": "2021-10-28",
-    "category": "intermediate_tutorial",
+    "category": "Intermediate tutorial",
     "methods": [
       {
         "name": "Subgroup discovery"

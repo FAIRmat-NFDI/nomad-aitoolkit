@@ -4,7 +4,7 @@
     "name": "Introduction to exploratory analysis (unsupervised learning) of materials spaces",
     "description": "Exploratory analyses make use of unsupervised learning techniques to extract information from unknown datasets. In this tutorial, we make use of some of the most popular clustering and dimension reduction algorithms to analyze a dataset composed of 82 octet-binary compounds.",
     "date": "2021-02-04",
-    "category": "beginner_tutorial",
+    "category": "Beginner tutorial",
     "methods": [
       {
         "name": "Clustering"
