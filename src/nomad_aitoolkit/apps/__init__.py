@@ -2,11 +2,9 @@
 from nomad.config import _plugins
 from nomad.config.models.plugins import AppEntryPoint
 from nomad.config.models.ui import (
-    AlignEnum,
     App,
     BreakpointEnum,
     Column,
-    Columns,
     Dashboard,
     FilterMenu,
     FilterMenus,
@@ -15,7 +13,6 @@ from nomad.config.models.ui import (
     Format,
     Layout,
     ModeEnum,
-    RowActions,
     RowActionURL,
     RowDetails,
     Rows,
@@ -32,17 +29,18 @@ try:
 except KeyError:
     upload_ids = None
 
+schema_name = 'nomad_aitoolkit.schema.AIToolkitNotebook'
 if upload_ids:
     filters_locked = {
         'upload_id': upload_ids,
         'section_defs.definition_qualified_name': [
-            'nomad_aitoolkit.schema.AIToolkitNotebook'
+            schema_name
         ],
     }
 else:
     filters_locked = {
         'section_defs.definition_qualified_name': [
-            'nomad_aitoolkit.schema.AIToolkitNotebook'
+            schema_name
         ]
     }
 
@@ -56,46 +54,24 @@ aitoolkit = AppEntryPoint(
         path='ai-toolkit',
         category='Tools',
         filters=Filters(
-            include=['*#nomad_aitoolkit.schema.AIToolkitNotebook'],
+            include=[f'*#{schema_name}'],
             # exclude=['*#nomad.datamodel.metainfo.eln.BasicEln'],
         ),
         filters_locked=filters_locked,
-        columns=Columns(
-            include=[
-                'entry_id',
-                'entry_type',
-                'authors',
-                'data.name#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.category#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.platform#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.date#nomad_aitoolkit.schema.AIToolkitNotebook',
-            ],
-            selected=[
-                'data.name#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'authors',
-                'data.category#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.date#nomad_aitoolkit.schema.AIToolkitNotebook',
-            ],
-            options={
-                'entry_id': Column(),
-                'entry_type': Column(label='Entry type', align=AlignEnum.LEFT),
-                'authors': Column(label='Authors', align=AlignEnum.LEFT),
-                'data.name#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Name', align=AlignEnum.LEFT
-                ),
-                'data.category#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Category'
-                ),
-                'data.platform#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Platform', align=AlignEnum.LEFT
-                ),
-                'data.date#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Last update',
-                    align=AlignEnum.LEFT,
-                    format=Format(mode=ModeEnum.DATE),
-                ),
-            },
-        ),
+        columns=[
+            Column(quantity=f'data.name#{schema_name}', selected=True),
+            Column(quantity=f'data.category#{schema_name}', selected=True),
+            Column(
+                quantity=f'data.date#{schema_name}',
+                label='Upload time',
+                selected=True,
+                format=Format(mode=ModeEnum.DATE),
+            ),
+            Column(quantity='entry_id'),
+            Column(quantity='entry_type'),
+            Column(quantity='authors'),
+            Column(quantity=f'data.platform#{schema_name}'),
+        ],
         filter_menus=FilterMenus(
             options={
                 'custom_quantities': FilterMenu(
@@ -109,7 +85,7 @@ aitoolkit = AppEntryPoint(
             widgets=[
                 WidgetTerms(
                     type='terms',
-                    quantity='data.category#nomad_aitoolkit.schema.AIToolkitNotebook',
+                    quantity=f'data.category#{schema_name}',
                     scale=ScaleEnum.POW1,
                     layout={
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=0, y=0),
@@ -117,11 +93,11 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.LG: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.SM: Layout(h=6, w=6, x=0, y=0),
-                    },
+                    }
                 ),
                 WidgetTerms(
                     type='terms',
-                    quantity='data.methods.name#nomad_aitoolkit.schema.AIToolkitNotebook',
+                    quantity=f'data.methods.name#{schema_name}',
                     title='Methods',
                     scale=ScaleEnum.POW1,
                     layout={
@@ -130,11 +106,11 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.LG: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.SM: Layout(h=6, w=6, x=6, y=0),
-                    },
+                    }
                 ),
                 WidgetTerms(
                     type='terms',
-                    quantity='data.systems.name#nomad_aitoolkit.schema.AIToolkitNotebook',
+                    quantity=f'data.systems.name#{schema_name}',
                     title='Systems',
                     scale=ScaleEnum.POW1,
                     layout={
@@ -143,23 +119,25 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.LG: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.SM: Layout(h=6, w=6, x=12, y=0),
-                    },
-                ),
+                    }
+                )
             ]
         ),
         rows=Rows(
-            actions=RowActions(
-                enabled=True,
-                options={
-                    'launch': RowActionURL(
-                        type='url',
-                        path="data.references[?kind=='hub'].uri",
-                        description='Launch Jupyter notebook',
-                    )
-                },
-            ),
+            actions=[
+                RowActionURL(
+                    path=f"data.references[?kind=='hub'].uri#{schema_name}",
+                    description='Launch Jupyter notebook',
+                    icon='launch',
+                ),
+                RowActionURL(
+                    path=f"data.references[?kind=='repository'].uri#{schema_name}",
+                    description='Go to notebook repository',
+                    icon='github',
+                )
+            ],
             details=RowDetails(enabled=True),
             selection=RowSelection(enabled=True),
-        ),
-    ),
+        )
+    )
 )
