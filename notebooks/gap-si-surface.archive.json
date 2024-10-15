@@ -25,7 +25,7 @@
         "name": "Gaussian approximation potentials (GAP)"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Silicon"
       },

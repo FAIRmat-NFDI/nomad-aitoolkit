@@ -2,11 +2,9 @@
 from nomad.config import _plugins
 from nomad.config.models.plugins import AppEntryPoint
 from nomad.config.models.ui import (
-    AlignEnum,
     App,
     BreakpointEnum,
     Column,
-    Columns,
     Dashboard,
     FilterMenu,
     FilterMenus,
@@ -15,7 +13,6 @@ from nomad.config.models.ui import (
     Format,
     Layout,
     ModeEnum,
-    RowActions,
     RowActionURL,
     RowDetails,
     Rows,
@@ -60,42 +57,26 @@ aitoolkit = AppEntryPoint(
             # exclude=['*#nomad.datamodel.metainfo.eln.BasicEln'],
         ),
         filters_locked=filters_locked,
-        columns=Columns(
-            include=[
-                'entry_id',
-                'entry_type',
-                'authors',
-                'data.name#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.category#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.platform#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.date#nomad_aitoolkit.schema.AIToolkitNotebook',
-            ],
-            selected=[
-                'data.name#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'authors',
-                'data.category#nomad_aitoolkit.schema.AIToolkitNotebook',
-                'data.date#nomad_aitoolkit.schema.AIToolkitNotebook',
-            ],
-            options={
-                'entry_id': Column(),
-                'entry_type': Column(label='Entry type', align=AlignEnum.LEFT),
-                'authors': Column(label='Authors', align=AlignEnum.LEFT),
-                'data.name#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Name', align=AlignEnum.LEFT
-                ),
-                'data.category#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Category'
-                ),
-                'data.platform#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Platform', align=AlignEnum.LEFT
-                ),
-                'data.date#nomad_aitoolkit.schema.AIToolkitNotebook': Column(
-                    label='Last update',
-                    align=AlignEnum.LEFT,
-                    format=Format(mode=ModeEnum.DATE),
-                ),
-            },
-        ),
+        columns=[
+            Column(
+                quantity='data.name#nomad_aitoolkit.schema.AIToolkitNotebook',
+                selected=True,
+            ),
+            Column(
+                quantity='data.category#nomad_aitoolkit.schema.AIToolkitNotebook',
+                selected=True,
+            ),
+            Column(
+                quantity='data.date#nomad_aitoolkit.schema.AIToolkitNotebook',
+                label='Upload time',
+                selected=True,
+                format=Format(mode=ModeEnum.DATE),
+            ),
+            Column(quantity='entry_id'),
+            Column(quantity='entry_type'),
+            Column(quantity='authors'),
+            Column(quantity='data.platform#nomad_aitoolkit.schema.AIToolkitNotebook'),
+        ],
         filter_menus=FilterMenus(
             options={
                 'custom_quantities': FilterMenu(
@@ -148,21 +129,18 @@ aitoolkit = AppEntryPoint(
             ]
         ),
         rows=Rows(
-            actions=RowActions(
-                enabled=True,
-                options={
-                    'launch': RowActionURL(
-                        type='url',
-                        path="data.references[?kind=='hub'].uri",
-                        description='Launch Jupyter notebook',
-                    ),
-                    'repository': RowActionURL(
-                        type='downloadurl',
-                        path="data.references[?kind=='repository'].uri",
-                        description='Link to the repository',
-                    ),
-                },
-            ),
+            actions=[
+                RowActionURL(
+                    path="data.references[?kind=='repository'].uri",
+                    description='Go to the repository',
+                    icon='file_download',
+                ),
+                RowActionURL(
+                    path="data.references[?kind=='hub'].uri",
+                    description='Launch Jupyter notebook',
+                    icon='launch',
+                ),
+            ],
             details=RowDetails(enabled=True),
             selection=RowSelection(enabled=True),
         ),

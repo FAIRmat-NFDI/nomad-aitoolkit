@@ -13,7 +13,7 @@
         "name": "Fingerprint"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Binaries"
       },

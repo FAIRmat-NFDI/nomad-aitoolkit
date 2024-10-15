@@ -22,7 +22,7 @@
         "name": "Atomic features"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Octet binaries"
       },

@@ -22,7 +22,7 @@
         "name": "SOAP"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "GDB molecular database"
       },
