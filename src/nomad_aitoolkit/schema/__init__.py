@@ -44,13 +44,13 @@ class Method(ArchiveSection):
     )
 
 
-class System(ArchiveSection):
+class Application(ArchiveSection):
     m_def = Section(a_eln=ELNAnnotation(overview=True))
 
     name = Quantity(
         type=str,
         a_eln=ELNAnnotation(component=ELNComponentEnum.StringEditQuantity),
-        description='Specifying name of the system.',
+        description='Specifying name of the application.',
     )
 
 
@@ -154,11 +154,10 @@ class AIToolkitNotebook(Schema):
             component=ELNComponentEnum.EnumEditQuantity,
             props=dict(
                 suggestions=[
-                    'advanced tutorial',
-                    'beginner tutorial',
-                    'intermediate tutorial',
-                    'query tutorial',
-                    'thermal transport',
+                    'Advanced tutorial',
+                    'Beginner tutorial',
+                    'Intermediate tutorial',
+                    'Query tutorial',
                 ]
             ),
         ),
@@ -175,7 +174,7 @@ class AIToolkitNotebook(Schema):
 
     methods = SubSection(section=Method, repeats=True)
 
-    systems = SubSection(section=System, repeats=True)
+    applications = SubSection(section=Application, repeats=True)
 
     references = SubSection(section=Reference, repeats=True)
 

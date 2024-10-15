@@ -13,9 +13,9 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: Apache Software License",
 ]
-name = "nomad-aitoolkit"
+name = "nomad-schema-plugin-ai-toolkit"
 description = "Schema and app for AI Toolkit notebooks."
-version = "0.1.1"
+version = "0.2.0"
 readme = "README.rst"
 requires-python = ">=3.9"
 authors = [
@@ -28,7 +28,7 @@ license = { file = "LICENSE" }
 # dependencies = ["nomad-lab>=1.2.2dev578"]
 
 [project.urls]
-Repository = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit"
+Repository = "https://github.com/FAIRmat-NFDI/nomad-schema-plugin-ai-toolkit"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "structlog"]

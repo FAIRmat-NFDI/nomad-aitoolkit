@@ -10,10 +10,10 @@ This `nomad`_ plugin was generated with `Cookiecutter`_ along with `@nomad`_'s `
 ### Install
 
 You should create a virtual environment. You will need the `nomad-lab` package (and `pytest`).
-We recommend using Python 3.9.
+We recommend using Python 3.11.
 
 ```sh
-python3 -m venv .pyenv
+python -m venv .pyenv
 source .pyenv/bin/activate
 pip install --upgrade pip
 pip install -e '.[dev]' --index-url https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple

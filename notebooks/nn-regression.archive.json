@@ -4,7 +4,7 @@
     "name": "Introduction to multilayer perceptrons (deep neural networks)",
     "description": "In this tutorial, we discuss how multilayer perceptrons, a standard neural-network architecture, can be employed for regression tasks. Specifically, we will use the ElemNet neural-network architecture to predict the volume per atom of inorganic compounds, where the Open Quantum Materials Database (OQMD) is used as a resource.",
     "date": "2021-01-29",
-    "category": "beginner_tutorial",
+    "category": "Beginner tutorial",
     "methods": [
       {
         "name": "Supervised learning"
@@ -22,7 +22,7 @@
         "name": "Atomic features"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Inorganic compounds"
       },
