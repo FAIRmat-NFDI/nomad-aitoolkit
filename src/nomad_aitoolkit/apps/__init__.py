@@ -13,10 +13,9 @@ from nomad.config.models.ui import (
     Format,
     Layout,
     ModeEnum,
+    RowActions,
     RowActionURL,
-    RowDetails,
     Rows,
-    RowSelection,
     ScaleEnum,
     WidgetTerms,
 )
@@ -124,20 +123,20 @@ aitoolkit = AppEntryPoint(
             ]
         ),
         rows=Rows(
-            actions=[
-                RowActionURL(
-                    path=f"data.references[?kind=='hub'].uri#{schema_name}",
-                    description='Launch Jupyter notebook',
-                    icon='launch',
-                ),
-                RowActionURL(
-                    path=f"data.references[?kind=='repository'].uri#{schema_name}",
-                    description='Go to notebook repository',
-                    icon='github',
-                )
-            ],
-            details=RowDetails(enabled=True),
-            selection=RowSelection(enabled=True),
+            actions=RowActions(
+                items=[
+                    RowActionURL(
+                        path=f"data.references[?kind=='hub'].uri#{schema_name}",
+                        description='Launch Jupyter notebook',
+                        icon='launch',
+                    ),
+                    RowActionURL(
+                        path=f"data.references[?kind=='repository'].uri#{schema_name}",
+                        description='Go to notebook repository',
+                        icon='github',
+                    )
+                ]
+            )
         )
     )
 )
