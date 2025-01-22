@@ -126,14 +126,14 @@ aitoolkit = AppEntryPoint(
             actions=RowActions(
                 items=[
                     RowActionURL(
+                        path=f"data.references[?kind=='repository'].uri#{schema_name}",
+                        description='Go to notebook repository',
+                        icon='file_download',
+                    ),
+                    RowActionURL(
                         path=f"data.references[?kind=='hub'].uri#{schema_name}",
                         description='Launch Jupyter notebook',
                         icon='launch',
-                    ),
-                    RowActionURL(
-                        path=f"data.references[?kind=='repository'].uri#{schema_name}",
-                        description='Go to notebook repository',
-                        icon='github',
                     )
                 ]
             )
