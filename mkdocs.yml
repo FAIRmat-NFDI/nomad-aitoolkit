@@ -2,7 +2,7 @@ site_name: nomad-aitoolkit
 site_description: Schema and app for AI Toolkit notebooks.
 site_author: Adam Fekete
 
-repo_url: https://github.com/fekad/nomad-aitoolkit
+repo_url: https://github.com/FAIRmat-NFDI/nomad-aitoolkit
 
 nav:
   - Home: index.md
