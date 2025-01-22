@@ -4,7 +4,7 @@
     "name": "Discovery of new topological insulators in alloyed tetradymites",
     "description": "Learn how to find descriptive parameters (short formulas) that predict whether alloyed materials are topological or trivial insulators, using the example of tetradymites. This notebook is based on the algorithm 'sure independence screening and sparsifying operator' (SISSO) that enables to search for optimal descriptor by scanning huge feature spaces.",
     "date": "2020-09-15",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"
@@ -25,7 +25,7 @@
         "name": "SISSO"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Tetradymites"
       },

@@ -109,8 +109,8 @@ aitoolkit = AppEntryPoint(
                 ),
                 WidgetTerms(
                     type='terms',
-                    quantity=f'data.systems.name#{schema_name}',
-                    title='Systems',
+                    quantity=f'data.applications.name#{schema_name}',
+                    title='Applications',
                     scale=ScaleEnum.POW1,
                     layout={
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=12, y=0),

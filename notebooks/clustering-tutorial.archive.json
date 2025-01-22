@@ -4,7 +4,7 @@
     "name": "Introduction to clustering",
     "description": "In this tutorial, we introduce to the most popular clustering algorithms. We focus on partitioning, hierarchical and density-based clustering algorithms. The methods are tested on synthetic datasets of increasing complexity",
     "date": "2021-01-21",
-    "category": "beginner_tutorial",
+    "category": "Beginner tutorial",
     "methods": [
       {
         "name": "Unsupervised learning"
@@ -25,7 +25,7 @@
         "name": "HDBSCAN"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Synthetic data"
       }

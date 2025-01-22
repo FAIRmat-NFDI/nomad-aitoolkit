@@ -32,7 +32,7 @@ Repository = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "structlog"]
-docs = ["mkdocs", "mkdocs-material==8.1.1", "pymdown-extensions", "mkdocs-click"]
+docs = ["mkdocs", "mkdocs-material", "pymdown-extensions", "mkdocs-click"]
 
 [project.entry-points.'nomad.plugin']
 aitookitschema = "nomad_aitoolkit:aitoolkit"

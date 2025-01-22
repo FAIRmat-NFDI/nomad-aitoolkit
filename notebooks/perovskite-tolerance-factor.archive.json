@@ -4,7 +4,7 @@
     "name": "Finding a tolerance factor to predict perovskite stability with SISSO",
     "description": "This tutorial shows how a tolerance factor for predicting perovskite stability can be learned from data with the sure-independece-screening-and-sparsifying-operator (SISSO) descriptor-identification approach.",
     "date": "2022-05-18",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"
@@ -31,7 +31,7 @@
         "name": "Atomic features"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Perovskites"
       }
