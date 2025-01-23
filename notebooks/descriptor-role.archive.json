@@ -4,7 +4,7 @@
     "name": "Predicting energy differences between crystal structures: (Meta-)stability of octet-binary compounds",
     "description": "A tool for predicting the difference in the total energy between different polymorphs for 82 octet binary compounds, which gives an indication of the stability of the material. This is accomplished by identifying a set of descriptive parameters (a descriptor) from the free-atom data for the binary atomic species comprising the material using the Sure Independent Screening (SIS) + l0-norm minimization approach.",
     "date": "2021-10-18",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"
@@ -22,7 +22,7 @@
         "name": "Atomic features"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Octet binaries"
       },

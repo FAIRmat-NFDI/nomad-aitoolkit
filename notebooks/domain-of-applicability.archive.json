@@ -4,7 +4,7 @@
     "name": "Identifying domains of applicability of machine-Learning models for materials science",
     "description": "In this tutorial, we present a method, based on subgroup discovery, for detecting domains of applicability (DA) of ML models within a materials class. The domain of applicability of an ML model is the region of input space where the model predicts the target property with the smallest uncertainty. The utility of this approach is demonstrated by analyzing three state-of-the-art ML models for predicting the formation energy of transparent conducting oxides.",
     "date": "2021-01-27",
-    "category": "advanced_tutorial",
+    "category": "Advanced tutorial",
     "methods": [
       {
         "name": "Supervised learning"
@@ -28,7 +28,7 @@
         "name": "n-gram"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Transparent conducting oxides"
       }

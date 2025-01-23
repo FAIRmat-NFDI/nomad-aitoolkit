@@ -2,48 +2,7 @@
 
 Schema and app for AI Toolkit notebooks.
 
-----
 
-This `nomad`_ plugin was generated with `Cookiecutter`_ along with `@nomad`_'s `cookiecutter-nomad-plugin`_ template.
-
-
-### Install
-
-You should create a virtual environment. You will need the `nomad-lab` package (and `pytest`).
-We recommend using Python 3.9.
-
-```sh
-python3 -m venv .pyenv
-source .pyenv/bin/activate
-pip install --upgrade pip
-pip install -e '.[dev]' --index-url https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple
-```
-
-**Note!**
-Until we have an official pypi NOMAD release with the plugins functionality. Make
-sure to include NOMAD's internal package registry (e.g. via `--index-url`).
-
-### Testing
-
-You can run automated tests with `pytest`:
-
-```sh
-pytest -svx tests
-```
-
-### Run linting
-
-```sh
-ruff check .
-```
-
-### Run auto-formatting
-
-This is entirely optional. To add this as a check in github actions pipeline, uncomment the `ruff-formatting` step in `./github/workflows/actions.yaml`.
-
-```sh
-ruff format .
-```
 
 ### Developing a NOMAD plugin
 

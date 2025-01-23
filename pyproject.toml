@@ -15,7 +15,7 @@ classifiers = [
 ]
 name = "nomad-aitoolkit"
 description = "Schema and app for AI Toolkit notebooks."
-version = "0.1.1"
+dynamic = ["version"]
 readme = "README.rst"
 requires-python = ">=3.9"
 authors = [
@@ -32,7 +32,22 @@ Repository = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "structlog"]
-docs = ["mkdocs", "mkdocs-material==8.1.1", "pymdown-extensions", "mkdocs-click"]
+docs = ["mkdocs", "mkdocs-material", "pymdown-extensions", "mkdocs-click"]
+
+[project.entry-points.'nomad.plugin']
+aitookitschema = "nomad_aitoolkit:aitoolkit"
+aitookitapp = "nomad_aitoolkit.apps:aitoolkit"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { git = true }]
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
@@ -102,13 +117,4 @@ skip-magic-trailing-comma = false
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
 
-[tool.setuptools]
-package-dir = { "" = "src" }
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
-[project.entry-points.'nomad.plugin']
-aitookitschema = "nomad_aitoolkit:aitoolkit"
-aitookitapp = "nomad_aitoolkit.apps:aitoolkit"
 

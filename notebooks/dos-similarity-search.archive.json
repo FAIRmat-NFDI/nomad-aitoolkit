@@ -4,7 +4,7 @@
     "name": "Electronic density-of-states similarity search",
     "description": "This notebook shows how to compute the similarity of materials in terms of their electronic density-of-states (DOS), from data retrieved from the NOMAD Archive.",
     "date": "2022-03-30",
-    "category": "intermediate_tutorial",
+    "category": "Intermediate tutorial",
     "methods": [
       {
         "name": "Similarity search"
@@ -13,7 +13,7 @@
         "name": "Fingerprint"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Binaries"
       },

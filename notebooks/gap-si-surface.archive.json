@@ -4,7 +4,7 @@
     "name": "The SOAP descriptor, Gaussian Approximation Potentials (GAP) and machine learning of force fields",
     "description": "In this tutorial, we will be using a Gaussian Approximation Potentials to analyse results of TB DFT calculations on the Si surface. Along the way we will learn about different descriptors (2b, 3b, SOAP) to describe local atomic environment in order to predict energies and forces of the Si surface.",
     "date": "2020-06-18",
-    "category": "intermediate_tutorial",
+    "category": "Intermediate tutorial",
     "methods": [
       {
         "name": "Supervised learning"
@@ -25,7 +25,7 @@
         "name": "Gaussian approximation potentials (GAP)"
       }
     ],
-    "systems": [
+    "applications": [
       {
         "name": "Silicon"
       },
