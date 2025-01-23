@@ -6,19 +6,23 @@ from nomad.config.models.ui import (
     BreakpointEnum,
     Column,
     Dashboard,
-    FilterMenu,
-    FilterMenus,
-    FilterMenuSizeEnum,
-    Filters,
     Format,
     Layout,
+    Menu,
+    MenuItemHistogram,
+    MenuItemTerms,
+    MenuItemVisibility,
     ModeEnum,
     RowActions,
     RowActionURL,
     Rows,
     ScaleEnum,
+    SearchQuantities,
     WidgetTerms,
 )
+
+schema = 'nomad_aitoolkit.schema.AIToolkitNotebook'
+filters_locked = {'section_defs.definition_qualified_name': [schema]}
 
 # Workaround: read the upload_ids from plugin's raw config.
 try:
@@ -28,20 +32,8 @@ try:
 except KeyError:
     upload_ids = None
 
-schema_name = 'nomad_aitoolkit.schema.AIToolkitNotebook'
 if upload_ids:
-    filters_locked = {
-        'upload_id': upload_ids,
-        'section_defs.definition_qualified_name': [
-            schema_name
-        ],
-    }
-else:
-    filters_locked = {
-        'section_defs.definition_qualified_name': [
-            schema_name
-        ]
-    }
+    filters_locked['upload_id'] = upload_ids
 
 
 aitoolkit = AppEntryPoint(
@@ -52,16 +44,15 @@ aitoolkit = AppEntryPoint(
         description='Search AI toolkit notebooks',
         path='ai-toolkit',
         category='Tools',
-        filters=Filters(
-            include=[f'*#{schema_name}'],
-            # exclude=['*#nomad.datamodel.metainfo.eln.BasicEln'],
+        search_quantities=SearchQuantities(
+            include=[f'*#{schema}'],
         ),
         filters_locked=filters_locked,
         columns=[
-            Column(quantity=f'data.name#{schema_name}', selected=True),
-            Column(quantity=f'data.category#{schema_name}', selected=True),
+            Column(quantity=f'data.name#{schema}', selected=True),
+            Column(quantity=f'data.category#{schema}', selected=True),
             Column(
-                quantity=f'data.date#{schema_name}',
+                quantity=f'data.date#{schema}',
                 label='Upload time',
                 selected=True,
                 format=Format(mode=ModeEnum.DATE),
@@ -69,22 +60,55 @@ aitoolkit = AppEntryPoint(
             Column(quantity='entry_id'),
             Column(quantity='entry_type'),
             Column(quantity='authors'),
-            Column(quantity=f'data.platform#{schema_name}'),
+            Column(quantity=f'data.platform#{schema}'),
         ],
-        filter_menus=FilterMenus(
-            options={
-                'custom_quantities': FilterMenu(
-                    label='Notebooks', size=FilterMenuSizeEnum.L
+        menu=Menu(
+            title='AI Toolkit Notebook',
+            items=[
+                Menu(
+                    title='Author',
+                    items=[
+                        MenuItemTerms(
+                            search_quantity='authors.name',
+                            options=15
+                        ),
+                    ]
                 ),
-                'author': FilterMenu(label='Author', size=FilterMenuSizeEnum.M),
-                'metadata': FilterMenu(label='Visibility / IDs'),
-            }
+                Menu(
+                    title='Notebook',
+                    items=[
+                        MenuItemTerms(
+                            search_quantity=f'data.category#{schema}'
+                        ),
+                        MenuItemTerms(
+                            search_quantity=f'data.methods.name#{schema}'
+                        ),
+                        MenuItemTerms(
+                            search_quantity=f'data.applications.name#{schema}'
+                        ),
+                        MenuItemTerms(
+                            search_quantity=f'data.platform#{schema}'
+                        ),
+                        MenuItemHistogram(
+                            x=f'data.date#{schema}'
+                        )
+                    ]
+                ),
+                Menu(
+                    title='Visibility',
+                    items=[
+                        MenuItemVisibility(),
+                    ]
+                )
+
+            ]
+
         ),
         dashboard=Dashboard(
             widgets=[
                 WidgetTerms(
                     type='terms',
-                    quantity=f'data.category#{schema_name}',
+                    quantity=f'data.category#{schema}',
                     scale=ScaleEnum.POW1,
                     layout={
                         BreakpointEnum.XXL: Layout(h=6, w=6, x=0, y=0),
@@ -92,11 +116,11 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.LG: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.SM: Layout(h=6, w=6, x=0, y=0),
-                    }
+                    },
                 ),
                 WidgetTerms(
                     type='terms',
-                    quantity=f'data.methods.name#{schema_name}',
+                    quantity=f'data.methods.name#{schema}',
                     title='Methods',
                     scale=ScaleEnum.POW1,
                     layout={
@@ -105,11 +129,11 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.LG: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.SM: Layout(h=6, w=6, x=6, y=0),
-                    }
+                    },
                 ),
                 WidgetTerms(
                     type='terms',
-                    quantity=f'data.applications.name#{schema_name}',
+                    quantity=f'data.applications.name#{schema}',
                     title='Applications',
                     scale=ScaleEnum.POW1,
                     layout={
@@ -118,25 +142,25 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.LG: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.SM: Layout(h=6, w=6, x=12, y=0),
-                    }
-                )
+                    },
+                ),
             ]
         ),
         rows=Rows(
             actions=RowActions(
                 items=[
                     RowActionURL(
-                        path=f"data.references[?kind=='repository'].uri#{schema_name}",
+                        path=f"data.references[?kind=='repository'].uri#{schema}",
                         description='Go to notebook repository',
                         icon='file_download',
                     ),
                     RowActionURL(
-                        path=f"data.references[?kind=='hub'].uri#{schema_name}",
+                        path=f"data.references[?kind=='hub'].uri#{schema}",
                         description='Launch Jupyter notebook',
                         icon='launch',
-                    )
+                    ),
                 ]
             )
-        )
-    )
+        ),
+    ),
 )
