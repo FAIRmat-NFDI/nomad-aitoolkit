@@ -115,7 +115,7 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.XL: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.LG: Layout(h=6, w=6, x=0, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=0, y=0),
-                        BreakpointEnum.SM: Layout(h=6, w=6, x=0, y=0),
+                        BreakpointEnum.SM: Layout(h=9, w=12, x=0, y=0),
                     },
                 ),
                 WidgetTerms(
@@ -128,7 +128,7 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.XL: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.LG: Layout(h=6, w=6, x=6, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=6, y=0),
-                        BreakpointEnum.SM: Layout(h=6, w=6, x=6, y=0),
+                        BreakpointEnum.SM: Layout(h=9, w=12, x=0, y=9),
                     },
                 ),
                 WidgetTerms(
@@ -141,7 +141,7 @@ aitoolkit = AppEntryPoint(
                         BreakpointEnum.XL: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.LG: Layout(h=6, w=6, x=12, y=0),
                         BreakpointEnum.MD: Layout(h=6, w=6, x=12, y=0),
-                        BreakpointEnum.SM: Layout(h=6, w=6, x=12, y=0),
+                        BreakpointEnum.SM: Layout(h=9, w=12, x=0, y=18),
                     },
                 ),
             ]
